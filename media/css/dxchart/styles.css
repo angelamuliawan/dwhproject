@@ -1,0 +1,279 @@
+.chart-header
+{
+    position: relative;
+    height: 62px;
+    background-color: #ffffff;
+    padding: 0px 40px;
+}
+
+.chart-line
+{
+    background-color: #707070;
+    height: 5px;
+    margin: 0 0 20px;
+}
+
+.chart-header .chart-content
+{
+    width: 950px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+    .chart-header .chart-content .chart-button
+    {
+        float: right;
+        margin: 18px 0 0 0;
+        text-decoration: none;
+        color: #565656;
+        font-size: 14px;
+        padding: 4px 18px 5px;
+        background-color: #E8E8E8;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(top, #eeeeee 0%, #e3e3e3 100%);
+        background-image: -o-linear-gradient(top, #eeeeee 0%, #e3e3e3 100%);
+        background-image: -moz-linear-gradient(top, #eeeeee 0%, #e3e3e3 100%);
+        background-image: -webkit-linear-gradient(top, #eeeeee 0%, #e3e3e3 100%);
+        background-image: -ms-linear-gradient(top, #eeeeee 0%, #e3e3e3 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #e3e3e3));
+        border-radius: 3px;
+        border: 1px solid #c3c3c3;
+        text-shadow: 1px 1px #ffffff;
+        box-shadow: 0px 1px 2px 0px #d7d7d7;
+        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.chart-1);
+    }
+
+    .chart-header .chart-content  a.chart-logo,
+    .chart-header .chart-content  a.chart-logo:link,
+    .chart-header .chart-content  a.chart-logo:visited,
+    .chart-header .chart-content  a.chart-logo:hover,
+    .chart-header .chart-content  a.chart-logo:active
+    {
+        text-decoration: none;
+        display: block;
+        height: 62px;
+        color: #8c8c8c;
+        font-size: 24px;
+        background-image: url("images/logo.chart-png");
+         background-repeat: no-repeat;
+     }
+      .chart-header .chart-content  div.chart-logo{
+           padding:14px 0 0 0;
+      }
+
+.chart-menu-content
+{
+    background-color: #707070;
+    border: 0 solid #606060;
+    border-top-width: 1px;
+    min-height: 4px;
+    min-width: 950px;
+    padding: 0 40px;
+}
+
+    .chart-menu-content .chart-democase-menu
+    {
+        color: #ffffff;
+        width: 950px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+        .chart-menu-content .chart-democase-menu:after
+        {
+            content: " ";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .chart-menu-content .chart-democase-menu h5,
+        .chart-menu-content .chart-democase-menu h6
+        {
+            font-weight: 400;
+            text-transform: none;
+            padding: 0 0 10px 0;
+        }
+
+        .chart-menu-content .chart-democase-menu h6
+        {
+            font-family: 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 0;
+        }
+
+        .chart-menu-content .chart-democase-menu .chart-category
+        {
+            height: 100%;
+            width: 25%;
+            float: left;
+        }
+
+.chart-category .chart-subcategory
+{
+    padding: 0 0 20px 0;
+}
+
+.chart-category h5
+{
+    margin: 0px;
+}
+
+.chart-category .chart-subcategory h6
+{
+    margin: 0px;
+}
+
+.chart-category .chart-subcategory ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+    .chart-category .chart-subcategory ul li
+    {
+        line-height: 18px;
+    }
+
+        .chart-category .chart-subcategory ul li a
+        {
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+            .chart-category .chart-subcategory ul li.chart-active a,
+            .chart-category .chart-subcategory ul li a:hover
+            {
+                background-color: #B0B0B0;
+                margin: -2px -3px;
+                padding: 2px 3px;
+            }
+
+        .chart-category .chart-subcategory ul li.chart-active a
+        {
+            background-color: #ffffff;
+            color: #707070;
+        }
+		
+            .chart-category .chart-subcategory ul li.chart-isnew a:after {
+                content: ' ';
+                position: relative;
+                display: inline-block;
+                background-image: url('images/newdemo.chart-png');
+                width: 26px;
+                height: 14px;
+                top: 3px;
+                left: 5px;
+                margin: 0 5px 0 0;
+            }
+
+.chart-title
+{
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 950px;
+}
+
+    .chart-title h1,
+    .chart-title h2
+    {
+        display: inline;
+        font-size: 30px;
+        color: #565656;
+        text-transform: none;
+    }
+
+    .chart-title h2
+    {
+        color: #f17f21
+    }
+
+.chart-content
+{
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 950px;
+}
+
+.chart-pane
+{
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    text-align: center;
+    width: 850px;
+    height: 440px;
+    padding: 50px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 3px 0px #e3e3e3;
+    box-shadow: 0px 1px 3px 0px rgba(112,112,112,0.chart-05);
+}
+
+    .chart-pane .chart-long-title
+    {
+        position: absolute;
+        top: 15px;
+        text-align: center;
+        width: 850px;
+        overflow: hidden;
+    }
+
+        .chart-pane .chart-long-title h3
+        {
+            font-size: 28px;
+        }
+
+    .chart-pane .chart-credits
+    {
+        color: rgba(128, 128, 128, 0.chart-75);
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+    }
+	
+.chart-case-container svg {
+	margin: 0 auto;
+}
+	
+/*Sparklines demo*/
+
+.chart-demo-table {
+    margin-top: 80px;
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    color: #565656;
+    border-collapse: collapse;
+}
+
+    .chart-demo-table th,
+    .chart-demo-table td {
+        font-weight: 400;
+        width: 200px;
+        padding: 25px 10px 5px 10px;
+        border: 1px solid #e5e5e5;
+    }
+
+    .chart-demo-table th {
+        padding: 25px 15px 20px 15px;
+        border: 1px solid #c2c2c2;
+    }
+
+    .chart-demo-table tr:nth-child(2) td {
+        border-top: 1px solid #c2c2c2;
+    }
+
+    .chart-demo-table td:first-of-type {
+        border-left: 1px solid #c2c2c2;
+    }
+
+    .chart-demo-table .chart-sparkline {
+        width: 200px;
+        height: 30px;
+    }

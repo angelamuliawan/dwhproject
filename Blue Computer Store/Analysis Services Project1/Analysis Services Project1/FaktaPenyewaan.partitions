@@ -1,0 +1,25 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a1467bf7-66c5-4e2a-ac53-777c52eabc34" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>OLAP</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fakta Penyewaan</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="520a61ea-9003-49d4-a815-f3cc6302d801">
+          <ID>Fakta Penyewaan</ID>
+          <Name>Fakta Penyewaan</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3bacc1f8-4807-40c2-8036-17311324e720">
+            <DataSourceViewID>OLAP</DataSourceViewID>
+            <TableID>dbo_FaktaPenyewaan</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

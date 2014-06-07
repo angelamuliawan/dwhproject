@@ -1,0 +1,103 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>OLAP</ID>
+        <ConnectionString>Provider=SQLNCLI10.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=OLAP</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+      <DataSource>
+        <ID>OLTP</ID>
+        <ConnectionString>Provider=SQLNCLI10.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=OLTP</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dimensi Waktu</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Employee</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Vendor</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Product</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Customer</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Service Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Computer Rent</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>OLAP</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Pembelian</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Pembelian</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP 1</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Layanan Service</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Layanan Service</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP 2</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Penjualan</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Penjualan</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP 3</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Penyewaan</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Penyewaan</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+      <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>

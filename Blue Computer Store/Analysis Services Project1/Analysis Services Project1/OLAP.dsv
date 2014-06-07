@@ -1,0 +1,281 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dca5fa00-10aa-4830-a370-f1646c4761ba" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>OLAP</ID>
+  <Name>OLAP</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>OLAP</DataSourceID>
+  <Schema>
+    <xs:schema id="OLAP" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="OLAP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="2365c7a8-c924-4561-9c89-b2ffdb3e0523">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DimensiComputerRent" msprop:FriendlyName="DimensiComputerRent" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiComputerRent" msprop:design-time-name="f7b32e59-bef7-4daf-994e-0a919211b07e" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ComputerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ComputerID" msprop:DbColumnName="ComputerID" msprop:design-time-name="935b1cd9-3365-4638-86d6-ab95db9782c8" type="xs:int" />
+                  <xs:element name="KodeComputer" msprop:FriendlyName="KodeComputer" msprop:DbColumnName="KodeComputer" msprop:design-time-name="c55de8b2-f369-4ad6-ba90-a02be65f27a7" type="xs:int" minOccurs="0" />
+                  <xs:element name="ComputerName" msprop:FriendlyName="ComputerName" msprop:DbColumnName="ComputerName" msprop:design-time-name="5826e39d-c757-42b8-81ed-3aa7d2a1f24e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimensiCustomer" msprop:FriendlyName="DimensiCustomer" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiCustomer" msprop:design-time-name="3953465c-0e7b-43ce-9f21-0aa265d7676a" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CustomerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="CustomerID" msprop:DbColumnName="CustomerID" msprop:design-time-name="896ae261-600a-4386-a059-d763419fef9f" type="xs:int" />
+                  <xs:element name="KodeCustomer" msprop:FriendlyName="KodeCustomer" msprop:DbColumnName="KodeCustomer" msprop:design-time-name="1bdb03c1-74f1-4f16-94f6-bc82694ca550" type="xs:int" minOccurs="0" />
+                  <xs:element name="CustomerName" msprop:FriendlyName="CustomerName" msprop:DbColumnName="CustomerName" msprop:design-time-name="cd6b7e13-f774-4fd2-95fe-fb8267b92ce7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CustomerGender" msprop:FriendlyName="CustomerGender" msprop:DbColumnName="CustomerGender" msprop:design-time-name="8be3f660-8aef-4d1a-8642-d31b77f5cfb6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimensiEmployee" msprop:FriendlyName="DimensiEmployee" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiEmployee" msprop:design-time-name="950764a7-ecf8-4676-8b50-ca1f071cf39c" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="EmployeeID" msprop:DbColumnName="EmployeeID" msprop:design-time-name="4788fd47-e1cc-4efd-9267-55d6568b0488" type="xs:int" />
+                  <xs:element name="KodeEmployee" msprop:FriendlyName="KodeEmployee" msprop:DbColumnName="KodeEmployee" msprop:design-time-name="562a38cc-c968-4328-9bd7-946d85e0b49b" type="xs:int" minOccurs="0" />
+                  <xs:element name="EmployeeName" msprop:FriendlyName="EmployeeName" msprop:DbColumnName="EmployeeName" msprop:design-time-name="2db72fe5-4b9f-405f-a9b8-d63ee68a5940" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimensiProduct" msprop:FriendlyName="DimensiProduct" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiProduct" msprop:design-time-name="f0e13eaf-5764-44f4-81f4-16c309405271" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProductID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ProductID" msprop:DbColumnName="ProductID" msprop:design-time-name="40f46b1c-3074-4b21-9225-e8702d17a8ea" type="xs:int" />
+                  <xs:element name="KodeProduct" msprop:FriendlyName="KodeProduct" msprop:DbColumnName="KodeProduct" msprop:design-time-name="12dd5cf3-479b-4205-b99e-d498f776997e" type="xs:int" minOccurs="0" />
+                  <xs:element name="ProductName" msprop:FriendlyName="ProductName" msprop:DbColumnName="ProductName" msprop:design-time-name="475c1d9a-1529-49c7-9ad7-3534e6a9ab1c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimensiServiceType" msprop:FriendlyName="DimensiServiceType" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiServiceType" msprop:design-time-name="f3324309-c202-4bcd-bdbb-089b6607b0a5" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ServiceTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ServiceTypeID" msprop:DbColumnName="ServiceTypeID" msprop:design-time-name="0a57d58b-a6a4-4cde-b81b-2261449eba39" type="xs:int" />
+                  <xs:element name="KodeServiceType" msprop:FriendlyName="KodeServiceType" msprop:DbColumnName="KodeServiceType" msprop:design-time-name="21aed869-f074-41c5-8d36-364aeed24df7" type="xs:int" minOccurs="0" />
+                  <xs:element name="ServiceTypeName" msprop:FriendlyName="ServiceTypeName" msprop:DbColumnName="ServiceTypeName" msprop:design-time-name="5ae2dfb6-eec8-4cdb-93bb-04348872c0a4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimensiVendor" msprop:FriendlyName="DimensiVendor" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiVendor" msprop:design-time-name="92abbc1e-a89a-4241-842d-ddde4fcb4ae2" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="VendorID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="VendorID" msprop:DbColumnName="VendorID" msprop:design-time-name="95b04c3a-7676-4803-bbc1-aba7f92e3383" type="xs:int" />
+                  <xs:element name="KodeVendor" msprop:FriendlyName="KodeVendor" msprop:DbColumnName="KodeVendor" msprop:design-time-name="313bd509-c85b-43ec-9fea-8cd47621d24d" type="xs:int" minOccurs="0" />
+                  <xs:element name="VendorName" msprop:FriendlyName="VendorName" msprop:DbColumnName="VendorName" msprop:design-time-name="8e07dbb0-e721-4310-98b7-1d88de1df35e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimensiWaktu" msprop:FriendlyName="DimensiWaktu" msprop:DbSchemaName="dbo" msprop:DbTableName="DimensiWaktu" msprop:design-time-name="2177abb9-27d8-4be3-8ebc-0f7d408c70b4" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WaktuID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="WaktuID" msprop:DbColumnName="WaktuID" msprop:design-time-name="aa0c3602-f713-478d-9119-2d32e644a958" type="xs:int" />
+                  <xs:element name="Tgl" msprop:FriendlyName="Tgl" msprop:DbColumnName="Tgl" msprop:design-time-name="371d4f75-3751-4e2f-bd78-7ff0deebade1" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Hari" msprop:FriendlyName="Hari" msprop:DbColumnName="Hari" msprop:design-time-name="60206926-1776-42f4-895e-9cee27559868" type="xs:int" minOccurs="0" />
+                  <xs:element name="Bulan" msprop:FriendlyName="Bulan" msprop:DbColumnName="Bulan" msprop:design-time-name="cbad4c4b-c258-427d-8375-b42d954c1c51" type="xs:int" minOccurs="0" />
+                  <xs:element name="Kuartal" msprop:FriendlyName="Kuartal" msprop:DbColumnName="Kuartal" msprop:design-time-name="2088ebe9-0ddd-4744-8302-eeb25e6a05b4" type="xs:int" minOccurs="0" />
+                  <xs:element name="Tahun" msprop:FriendlyName="Tahun" msprop:DbColumnName="Tahun" msprop:design-time-name="2ac28864-f6dd-499b-8e7a-0ac8d82afad6" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FaktaLayananService" msprop:FriendlyName="FaktaLayananService" msprop:DbSchemaName="dbo" msprop:DbTableName="FaktaLayananService" msprop:design-time-name="1f9783fb-daae-4b99-aff5-b17d0d91455d" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WaktuID" msprop:FriendlyName="WaktuID" msprop:DbColumnName="WaktuID" msprop:design-time-name="60652b68-2191-4edb-96b2-c15843069163" type="xs:int" minOccurs="0" />
+                  <xs:element name="EmployeeID" msprop:FriendlyName="EmployeeID" msprop:DbColumnName="EmployeeID" msprop:design-time-name="9eb1fb17-3d06-4c68-908d-d78304ad0450" type="xs:int" minOccurs="0" />
+                  <xs:element name="CustomerID" msprop:FriendlyName="CustomerID" msprop:DbColumnName="CustomerID" msprop:design-time-name="f3027272-69e5-44c3-b2d3-6e94fadbba8e" type="xs:int" minOccurs="0" />
+                  <xs:element name="ProductID" msprop:FriendlyName="ProductID" msprop:DbColumnName="ProductID" msprop:design-time-name="1f5af314-f35c-41a9-8354-075b53e9dfd9" type="xs:int" minOccurs="0" />
+                  <xs:element name="ServiceTypeID" msprop:FriendlyName="ServiceTypeID" msprop:DbColumnName="ServiceTypeID" msprop:design-time-name="eecbc1fe-b24e-48d0-9286-b6fad824b572" type="xs:int" minOccurs="0" />
+                  <xs:element name="JumlahPeralatanKomputerDigunakan" msprop:FriendlyName="JumlahPeralatanKomputerDigunakan" msprop:DbColumnName="JumlahPeralatanKomputerDigunakan" msprop:design-time-name="d0922bea-9b59-4665-b523-cd2dc6ca808d" type="xs:int" minOccurs="0" />
+                  <xs:element name="TotalServiceKomputer" msprop:FriendlyName="TotalServiceKomputer" msprop:DbColumnName="TotalServiceKomputer" msprop:design-time-name="d80f5d6f-dc10-461d-bc8b-9fa007b3589a" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FaktaPembelian" msprop:FriendlyName="FaktaPembelian" msprop:DbSchemaName="dbo" msprop:DbTableName="FaktaPembelian" msprop:design-time-name="da4ab524-9671-43c1-9213-971822750a81" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WaktuID" msprop:FriendlyName="WaktuID" msprop:DbColumnName="WaktuID" msprop:design-time-name="c286fd9c-8305-4567-b90c-7ee706d36e3c" type="xs:int" minOccurs="0" />
+                  <xs:element name="EmployeeID" msprop:FriendlyName="EmployeeID" msprop:DbColumnName="EmployeeID" msprop:design-time-name="9f8ee7e6-7224-4ee9-a7d8-7fed4eca1ca5" type="xs:int" minOccurs="0" />
+                  <xs:element name="VendorID" msprop:FriendlyName="VendorID" msprop:DbColumnName="VendorID" msprop:design-time-name="b4427edf-8fc7-4803-ab77-f04e6712c276" type="xs:int" minOccurs="0" />
+                  <xs:element name="ProductID" msprop:FriendlyName="ProductID" msprop:DbColumnName="ProductID" msprop:design-time-name="0d241cc0-c182-411a-be1e-920f6a9052b8" type="xs:int" minOccurs="0" />
+                  <xs:element name="JumlahPeralatanKomputerDibeli" msprop:FriendlyName="JumlahPeralatanKomputerDibeli" msprop:DbColumnName="JumlahPeralatanKomputerDibeli" msprop:design-time-name="fb8d45ba-61d2-44e7-ba56-bb93654801be" type="xs:int" minOccurs="0" />
+                  <xs:element name="TotalPembelianPeralatanKomputer" msprop:FriendlyName="TotalPembelianPeralatanKomputer" msprop:DbColumnName="TotalPembelianPeralatanKomputer" msprop:design-time-name="eeef6ed6-e926-49b9-9e8a-175b9bf32449" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FaktaPenjualan" msprop:FriendlyName="FaktaPenjualan" msprop:DbSchemaName="dbo" msprop:DbTableName="FaktaPenjualan" msprop:design-time-name="51a0d52a-e579-42bb-9121-f0ad0ac3eed0" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WaktuID" msprop:FriendlyName="WaktuID" msprop:DbColumnName="WaktuID" msprop:design-time-name="d47b70c1-6d71-4594-b66f-b05ca1c78248" type="xs:int" minOccurs="0" />
+                  <xs:element name="EmployeeID" msprop:FriendlyName="EmployeeID" msprop:DbColumnName="EmployeeID" msprop:design-time-name="722e57ce-8e7f-407c-970a-b8798fbd28e2" type="xs:int" minOccurs="0" />
+                  <xs:element name="CustomerID" msprop:FriendlyName="CustomerID" msprop:DbColumnName="CustomerID" msprop:design-time-name="453f8d79-6f72-4522-8180-f81c0dbe54f9" type="xs:int" minOccurs="0" />
+                  <xs:element name="ProductID" msprop:FriendlyName="ProductID" msprop:DbColumnName="ProductID" msprop:design-time-name="f34ebab0-06e8-4d46-98a1-fc067ae0dcee" type="xs:int" minOccurs="0" />
+                  <xs:element name="JumlahPeralatanKomputerDijual" msprop:FriendlyName="JumlahPeralatanKomputerDijual" msprop:DbColumnName="JumlahPeralatanKomputerDijual" msprop:design-time-name="d5cae599-fb92-4b88-b920-c42903ec46a5" type="xs:int" minOccurs="0" />
+                  <xs:element name="TotalPenjualanPeralatanKomputer" msprop:FriendlyName="TotalPenjualanPeralatanKomputer" msprop:DbColumnName="TotalPenjualanPeralatanKomputer" msprop:design-time-name="5d4af7aa-6fc4-47b3-89e3-ec82eed8cbc7" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FaktaPenyewaan" msprop:FriendlyName="FaktaPenyewaan" msprop:DbSchemaName="dbo" msprop:DbTableName="FaktaPenyewaan" msprop:design-time-name="2d6b9461-52a3-45cf-b473-cfd2bc5e9da4" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WaktuID" msprop:FriendlyName="WaktuID" msprop:DbColumnName="WaktuID" msprop:design-time-name="4606e5c5-66d5-4077-9687-dc414475272f" type="xs:int" minOccurs="0" />
+                  <xs:element name="CustomerID" msprop:FriendlyName="CustomerID" msprop:DbColumnName="CustomerID" msprop:design-time-name="4d3f903b-d513-4421-9f78-ff8e0e8dbc4f" type="xs:int" minOccurs="0" />
+                  <xs:element name="ComputerID" msprop:FriendlyName="ComputerID" msprop:DbColumnName="ComputerID" msprop:design-time-name="fd50576a-f35d-4811-9f79-96d74f18518a" type="xs:int" minOccurs="0" />
+                  <xs:element name="JumlahKomputerDisewa" msprop:FriendlyName="JumlahKomputerDisewa" msprop:DbColumnName="JumlahKomputerDisewa" msprop:design-time-name="5a6c68aa-5958-48dc-ba0f-e7f7a98b8504" type="xs:int" minOccurs="0" />
+                  <xs:element name="TotalPenyewaanKomputer" msprop:FriendlyName="TotalPenyewaanKomputer" msprop:DbColumnName="TotalPenyewaanKomputer" msprop:design-time-name="af1a3089-af69-4376-b086-0f47094beb36" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FilterTimeStamp" msprop:FriendlyName="FilterTimeStamp" msprop:DbSchemaName="dbo" msprop:DbTableName="FilterTimeStamp" msprop:design-time-name="6a5cc976-1331-4bfa-a943-acf7af4d421a" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="NamaTable" msprop:FriendlyName="NamaTable" msprop:DbColumnName="NamaTable" msprop:design-time-name="921efdd7-82d0-439d-b129-7aa020b2d969">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Last_ETL" msprop:FriendlyName="Last_ETL" msprop:DbColumnName="Last_ETL" msprop:design-time-name="01c69eed-c532-4346-8692-b1ced0d155f6" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiComputerRent" />
+          <xs:field xpath="ComputerID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimensiCustomer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiCustomer" />
+          <xs:field xpath="CustomerID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimensiEmployee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiEmployee" />
+          <xs:field xpath="EmployeeID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimensiProduct_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiProduct" />
+          <xs:field xpath="ProductID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimensiServiceType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiServiceType" />
+          <xs:field xpath="ServiceTypeID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimensiVendor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiVendor" />
+          <xs:field xpath="VendorID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimensiWaktu_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimensiWaktu" />
+          <xs:field xpath="WaktuID" />
+        </xs:unique>
+        <xs:unique name="dbo_FilterTimeStamp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FilterTimeStamp" />
+          <xs:field xpath="NamaTable" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FaktaLayananService-DimensiWaktu" msdata:parent="dbo_DimensiWaktu" msdata:child="dbo_FaktaLayananService" msdata:parentkey="WaktuID" msdata:childkey="WaktuID" />
+          <msdata:Relationship name="FaktaLayananService-DimensiEmployee" msdata:parent="dbo_DimensiEmployee" msdata:child="dbo_FaktaLayananService" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" />
+          <msdata:Relationship name="FaktaLayananService-DimensiCustomer" msdata:parent="dbo_DimensiCustomer" msdata:child="dbo_FaktaLayananService" msdata:parentkey="CustomerID" msdata:childkey="CustomerID" />
+          <msdata:Relationship name="FaktaLayananService-DimensiProduct" msdata:parent="dbo_DimensiProduct" msdata:child="dbo_FaktaLayananService" msdata:parentkey="ProductID" msdata:childkey="ProductID" />
+          <msdata:Relationship name="FaktaLayananService-DimensiServiceType" msdata:parent="dbo_DimensiServiceType" msdata:child="dbo_FaktaLayananService" msdata:parentkey="ServiceTypeID" msdata:childkey="ServiceTypeID" />
+          <msdata:Relationship name="FaktaPembelian-DimensiWaktu" msdata:parent="dbo_DimensiWaktu" msdata:child="dbo_FaktaPembelian" msdata:parentkey="WaktuID" msdata:childkey="WaktuID" />
+          <msdata:Relationship name="FaktaPembelian-DimensiEmployee" msdata:parent="dbo_DimensiEmployee" msdata:child="dbo_FaktaPembelian" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" />
+          <msdata:Relationship name="FaktaPembelian-DimensiVendor" msdata:parent="dbo_DimensiVendor" msdata:child="dbo_FaktaPembelian" msdata:parentkey="VendorID" msdata:childkey="VendorID" />
+          <msdata:Relationship name="FaktaPembelian-DimensiProduct" msdata:parent="dbo_DimensiProduct" msdata:child="dbo_FaktaPembelian" msdata:parentkey="ProductID" msdata:childkey="ProductID" />
+          <msdata:Relationship name="FaktaPenjualan-DimensiWaktu" msdata:parent="dbo_DimensiWaktu" msdata:child="dbo_FaktaPenjualan" msdata:parentkey="WaktuID" msdata:childkey="WaktuID" />
+          <msdata:Relationship name="FaktaPenjualan-DimensiEmployee" msdata:parent="dbo_DimensiEmployee" msdata:child="dbo_FaktaPenjualan" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" />
+          <msdata:Relationship name="FaktaPenjualan-DimensiCustomer" msdata:parent="dbo_DimensiCustomer" msdata:child="dbo_FaktaPenjualan" msdata:parentkey="CustomerID" msdata:childkey="CustomerID" />
+          <msdata:Relationship name="FaktaPenjualan-DimensiProduct" msdata:parent="dbo_DimensiProduct" msdata:child="dbo_FaktaPenjualan" msdata:parentkey="ProductID" msdata:childkey="ProductID" />
+          <msdata:Relationship name="FaktaPenyewaan-DimensiWaktu" msdata:parent="dbo_DimensiWaktu" msdata:child="dbo_FaktaPenyewaan" msdata:parentkey="WaktuID" msdata:childkey="WaktuID" />
+          <msdata:Relationship name="FaktaPenyewaan-DimensiCustomer" msdata:parent="dbo_DimensiCustomer" msdata:child="dbo_FaktaPenyewaan" msdata:parentkey="CustomerID" msdata:childkey="CustomerID" />
+          <msdata:Relationship name="FaktaPenyewaan-DimensiComputerRent" msdata:parent="dbo_DimensiComputerRent" msdata:child="dbo_FaktaPenyewaan" msdata:parentkey="ComputerID" msdata:childkey="ComputerID" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+  </Schema>
+</DataSourceView>
