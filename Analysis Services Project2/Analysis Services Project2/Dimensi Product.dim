@@ -1,0 +1,188 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8b6f6a1c-2357-46ca-ae8c-acd1a0707f47" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dimensi Product</ID>
+  <Name>Dimensi Product</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2017" scrolltop="-3889" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8096" y="11351" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="DimensiProduct" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4022" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60f0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimensiProduct" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2017</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3889</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8967a117-a6d3-4170-a1b0-a7e8f13c9e97">
+    <DataSourceViewID>OLAPView</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="e8b1b267-d4bb-45df-9f4c-05495573740e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="5dd3de55-38db-490b-ad25-5ccd3b7105f8">
+      <ID>Product Code</ID>
+      <Name>Product Code</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="640dd35d-9946-42d2-a1fd-1f207d3a57c7">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="348f988c-2dbb-4336-be35-e4dbdf26246e">
+            <TableID>dbo_DimensiProduct</TableID>
+            <ColumnID>ProductCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="82974ab4-3fb3-4d98-aed9-a74894f1e7a7">
+          <AttributeID>Product ID</AttributeID>
+          <Name>Product ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4c2b8a7e-e3fd-4a66-9ea6-bae2259bf961">
+          <AttributeID>Product Name</AttributeID>
+          <Name>Product Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a6e642ea-fa3d-4fa2-9f2f-0fe9e461030b">
+          <AttributeID>Product Purchase Price</AttributeID>
+          <Name>Product Purchase Price</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="720c8f61-430e-4cff-be0a-34befda20cdc">
+          <AttributeID>Product Sales Price</AttributeID>
+          <Name>Product Sales Price</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7d8ae023-918f-4c22-891b-7439124a53f5">
+          <AttributeID>Product Type Name</AttributeID>
+          <Name>Product Type Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="706fa26d-24bc-4c59-8ee4-8a40c49e6a5c">
+      <ID>Product ID</ID>
+      <Name>Product ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c18e1c34-f3bf-4812-8474-442431156754">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59233b62-af64-4931-ab46-dca82b3bf031">
+            <TableID>dbo_DimensiProduct</TableID>
+            <ColumnID>ProductID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="96474b4e-6f55-4186-b77d-9e2664c3580b">
+      <ID>Product Name</ID>
+      <Name>Product Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fcfbbd3f-db76-4dcf-a356-bd9b5e25a376">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d209d9c1-f9bb-45ea-bb62-93cc553f8b46">
+            <TableID>dbo_DimensiProduct</TableID>
+            <ColumnID>ProductName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="55db749f-3124-487d-b810-5972bcd3302e">
+      <ID>Product Purchase Price</ID>
+      <Name>Product Purchase Price</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a2f81018-a5e2-462a-b002-c36709475f98">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd09d1a5-9951-4311-9dfb-5a3e5cd4bade">
+            <TableID>dbo_DimensiProduct</TableID>
+            <ColumnID>ProductPurchasePrice</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="ab5c1c90-3f5b-4fa6-b124-c5ad29532587">
+      <ID>Product Sales Price</ID>
+      <Name>Product Sales Price</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6ed6233-44de-4b5d-92e8-a5624694edb5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4fd7076-3469-4800-ab27-b526bc6f1238">
+            <TableID>dbo_DimensiProduct</TableID>
+            <ColumnID>ProductSalesPrice</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="98f54c45-0771-483c-8283-85e12a3eb89b">
+      <ID>Product Type Name</ID>
+      <Name>Product Type Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5e7a8ff2-1054-4252-a717-c9625048b042">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="974dc4b4-a1f9-48c2-a2b5-96e730148d9a">
+            <TableID>dbo_DimensiProduct</TableID>
+            <ColumnID>ProductTypeName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+</Dimension>

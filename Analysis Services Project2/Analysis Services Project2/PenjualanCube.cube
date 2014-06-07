@@ -1,0 +1,277 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f774039e-5628-43d1-8c25-b27e8fa79322" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PenjualanCube</ID>
+  <Name>PenjualanCube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="3e93c740-8563-42bb-82bb-d4a14505fa1b">
+      <ID>Dimensi Waktu</ID>
+      <Name>Dimensi Waktu</Name>
+      <DimensionID>Dimensi Waktu</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="552162d0-de7a-4b25-9e67-33250997b3a2">
+          <AttributeID>Time Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb57e36d-9abd-4275-8e00-4728b1724f83">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04865d36-30b8-45b6-a3da-a7a408e9b3a3">
+          <AttributeID>Hari</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6aa6dfb-1aeb-45b5-8dd7-dd01631f2ae7">
+          <AttributeID>Bulan</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ded388a5-efd0-4425-bb80-37411d63626d">
+          <AttributeID>Kuartal</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d963efe-c6af-45c8-8b58-fd22e03c80ee">
+          <AttributeID>Tahun</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="214bcf6f-d8d5-4eab-a7db-c3714b537210">
+      <ID>Dimensi Employee</ID>
+      <Name>Dimensi Employee</Name>
+      <DimensionID>Dimensi Employee</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1f9b7b45-2303-40ba-a91f-2fb6c1a0d06a">
+          <AttributeID>Employee Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4785eac2-e10c-429b-863d-325142afbf33">
+          <AttributeID>Employee ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="86613e7f-fabd-47a9-a54a-c1404d8b2443">
+          <AttributeID>Employee Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f48c128-d9e7-4af6-b406-ccc9170ccd2b">
+          <AttributeID>Employee Phone</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e00ac52f-8c28-4022-aa07-f98247535b7a">
+          <AttributeID>Employee Salary</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1285fb0-1999-4dc4-89ea-3cdf6b4b6344">
+          <AttributeID>Employee Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65c7062c-f54a-42e8-8cc3-adf6c54e43d9">
+          <AttributeID>Employee Join Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8133a290-29bb-4343-bd51-2b3af4e8e3fb">
+      <ID>Dimensi Customer</ID>
+      <Name>Dimensi Customer</Name>
+      <DimensionID>Dimensi Customer</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="82f2569c-6a06-467c-8e67-baebbe7e1062">
+          <AttributeID>Customer Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1fbb2d0-9175-4811-8f03-6774987791cd">
+          <AttributeID>Customer ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce4f9ecc-efde-4f7d-9808-1cbcbcb7c963">
+          <AttributeID>Customer Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aabb9a32-2bb0-4355-bb1a-d4ea868373ed">
+          <AttributeID>Customer Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85dea7eb-0318-41cc-8b66-762dcd108f2a">
+          <AttributeID>Customer Phone</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="efc2b107-1ab7-48df-9663-0898b5530523">
+      <ID>Dimensi Product</ID>
+      <Name>Dimensi Product</Name>
+      <DimensionID>Dimensi Product</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d0179ec4-1c00-46eb-b858-5324bb1d6d19">
+          <AttributeID>Product Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9e25c8f-ae11-42b1-abd3-af7ce15620f7">
+          <AttributeID>Product ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="938cf5f4-ad59-4b34-83df-645dd2e82796">
+          <AttributeID>Product Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e43b7909-0f19-4318-9926-9deed07a7002">
+          <AttributeID>Product Purchase Price</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2c12122d-dea7-4ad4-9a94-c450eecdb767">
+          <AttributeID>Product Sales Price</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2951b097-f74c-4152-8a48-8963a6328a92">
+          <AttributeID>Product Type Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="6537ca7e-61a7-4970-80dc-8f2ee23d53f5">
+      <ID>Fakta Penjualan</ID>
+      <Name>Fakta Penjualan</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c524c975-7494-4b13-a040-19647e9f53f0">
+          <ID>Jumlah Peralatan Komputer Dijual</ID>
+          <Name>Jumlah Peralatan Komputer Dijual</Name>
+          <Source dwd:design-time-name="99acc329-008d-4423-9c0c-a28c4e123354">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="87e03ce1-331f-491e-8fac-0c72ea69375e">
+              <TableID>dbo_FaktaPenjualan</TableID>
+              <ColumnID>JumlahPeralatanKomputerDijual</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="38f6ad24-7fbe-4a3c-8402-a0bc2c1a9aff">
+          <ID>Total Penjualan Peralatan Komputer</ID>
+          <Name>Total Penjualan Peralatan Komputer</Name>
+          <Source dwd:design-time-name="bbc65e6f-cc65-4d31-bc21-80078ee976dd">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2918f890-f912-4fd6-8008-895129175300">
+              <TableID>dbo_FaktaPenjualan</TableID>
+              <ColumnID>TotalPenjualanPeralatanKomputer</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3aaa2a3d-3e3f-4948-9d6e-86f2cebdc7a4">
+          <ID>Fakta Penjualan Count</ID>
+          <Name>Fakta Penjualan Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="0ffc9ddf-281c-4510-a565-e8e9118c8c07">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="26c27eab-937c-4c71-9a33-769dd0be8948">
+              <TableID>dbo_FaktaPenjualan</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="744abe4a-df07-4da7-8ab6-fa0d50cbe8bf">
+          <CubeDimensionID>Dimensi Waktu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3250d375-cbab-40ad-b41b-f4a874e2a6e6">
+              <AttributeID>Time Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1f3aa7f5-2c0f-42bb-9ee1-352d028a21d4">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c90b17ac-bda2-4516-94af-79ec3516291d">
+                    <TableID>dbo_FaktaPenjualan</TableID>
+                    <ColumnID>TimeCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ab91b55e-312b-4162-9556-5cb173163ca4">
+          <CubeDimensionID>Dimensi Employee</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1280ca2a-c7cc-4386-80de-6197c8a10403">
+              <AttributeID>Employee Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d8dc3788-0ae4-45cd-a089-ad0f7ff3bdd9">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e1fc3b6a-8ada-437e-b4b8-6e3b44d8950f">
+                    <TableID>dbo_FaktaPenjualan</TableID>
+                    <ColumnID>EmployeeCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bd9f3b17-832f-4a55-8397-017736a9a77c">
+          <CubeDimensionID>Dimensi Customer</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bf06c272-f1a9-4db1-8d66-ebb0f1470e41">
+              <AttributeID>Customer Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d465c2e7-f0b7-469b-9adf-9509b96b2fed">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="77dbe185-5216-4d45-b3ca-32e37b8bf265">
+                    <TableID>dbo_FaktaPenjualan</TableID>
+                    <ColumnID>CustomerCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="11b5f05b-2807-400c-8abe-3f0b0f7199a8">
+          <CubeDimensionID>Dimensi Product</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bde5cabf-5f4d-41bf-aae2-85eb3fb1c597">
+              <AttributeID>Product Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1bb8b467-4f82-497b-b696-9a3fb81a6ab5">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4becbca3-4a1f-4633-b799-f8a39e981e21">
+                    <TableID>dbo_FaktaPenjualan</TableID>
+                    <ColumnID>ProductCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="28539a04-ba49-47d8-bb34-dcfd4fb7bdae">
+    <DataSourceViewID>OLAPView</DataSourceViewID>
+  </Source>
+</Cube>

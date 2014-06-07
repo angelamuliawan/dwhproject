@@ -1,0 +1,25 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6b2dc652-cac6-4dbf-9a43-fc950499aedb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PembelianCube</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fakta Pembelian</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c2e988e1-3c4b-406b-933e-e2dbd72b1cf7">
+          <ID>Fakta Pembelian</ID>
+          <Name>Fakta Pembelian</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="22621bee-aeda-49ba-bf8e-314b91fd1fdf">
+            <DataSourceViewID>OLAPView</DataSourceViewID>
+            <TableID>dbo_FaktaPembelian</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

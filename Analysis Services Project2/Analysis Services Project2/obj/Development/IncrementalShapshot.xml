@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Analysis Services Project2</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>aYYnP9lhZljJr/SXZSJe9Q==6/7/2014 7:35:46 AM6/7/2014 7:35:46 AM</TimeStamp>
+        <ID>
+          <String>OLAP</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>+DRJ7UNSpFY52+A/xla8eQ==6/7/2014 7:36:23 AM6/7/2014 7:36:21 AM</TimeStamp>
+        <ID>
+          <String>OLAPView</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yraXU0EU2QLPq+6lIKjqPA==6/7/2014 7:52:51 AM6/7/2014 7:36:51 AM</TimeStamp>
+        <ID>
+          <String>Dimensi Waktu</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7DN8/pLWj3aW6N64v+u2pA==6/7/2014 7:38:32 AM6/7/2014 7:36:51 AM</TimeStamp>
+        <ID>
+          <String>Dimensi Employee</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Y3rjsWbQXN9dv+gN6ojBpg==6/7/2014 7:37:52 AM6/7/2014 7:36:51 AM</TimeStamp>
+        <ID>
+          <String>Dimensi Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>OMp8l9GD3bmVGMh5Q0XvCQ==6/7/2014 7:52:51 AM6/7/2014 7:36:51 AM</TimeStamp>
+        <ID>
+          <String>Dimensi Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Qxko9OvHhfwtrLn9nYif5A==6/7/2014 7:52:51 AM6/7/2014 7:36:51 AM</TimeStamp>
+        <ID>
+          <String>Dimensi Service Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>sd79RsLg1gx1RI84Hb38Ww==6/7/2014 7:54:54 AM6/7/2014 7:54:00 AM</TimeStamp>
+        <ID>
+          <String>Dimensi Vendor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>KrA35AVkdI6MqM0sgP8W2w==6/7/2014 7:52:51 AM6/7/2014 7:36:51 AMM61jlvfN+qq79feu8F/pTw==6/7/2014 7:36:52 AM6/7/2014 7:36:51 AM</TimeStamp>
+        <ID>
+          <String>LayananServiceCube</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>dIs5Zo5V4FXTv5g4WRGxFg==6/7/2014 7:54:54 AM6/7/2014 7:54:00 AMsKsqwfHuQ6FYfQyQerUK5A==6/7/2014 7:54:01 AM6/7/2014 7:54:00 AM</TimeStamp>
+        <ID>
+          <String>PembelianCube</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>E2CiSsY0yZT0OUJRVQFi7g==6/7/2014 7:54:19 AM6/7/2014 7:54:19 AMNBNNoRs5aoOnousAg1i9TA==6/7/2014 7:54:19 AM6/7/2014 7:54:19 AM</TimeStamp>
+        <ID>
+          <String>PenjualanCube</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>FU2ooLlxOkVZ1RX1EAPO6A==6/7/2014 7:34:59 AM6/7/2014 7:34:55 AM</TimeStamp>
+      <ID>
+        <String>Analysis Services Project2</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2014-06-07T14:54:57Z</LastDeployed>
+</DeploymentSnapshot>

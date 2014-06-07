@@ -1,0 +1,317 @@
+﻿<Infos>
+  <Item name="Dimensi Customer.dim">
+    <Time>635377234723776106</Time>
+    <Hash length="16">
+      <b>99</b>
+      <b>122</b>
+      <b>227</b>
+      <b>177</b>
+      <b>102</b>
+      <b>208</b>
+      <b>92</b>
+      <b>223</b>
+      <b>93</b>
+      <b>191</b>
+      <b>232</b>
+      <b>13</b>
+      <b>234</b>
+      <b>136</b>
+      <b>193</b>
+      <b>166</b>
+    </Hash>
+  </Item>
+  <Item name="LayananServiceCube.partitions">
+    <Time>635377234122721728</Time>
+    <Hash length="16">
+      <b>51</b>
+      <b>173</b>
+      <b>99</b>
+      <b>150</b>
+      <b>247</b>
+      <b>205</b>
+      <b>250</b>
+      <b>170</b>
+      <b>187</b>
+      <b>245</b>
+      <b>247</b>
+      <b>174</b>
+      <b>240</b>
+      <b>95</b>
+      <b>233</b>
+      <b>79</b>
+    </Hash>
+  </Item>
+  <Item name="Analysis Services Project2.database">
+    <Time>635377232991177007</Time>
+    <Hash length="16">
+      <b>21</b>
+      <b>77</b>
+      <b>168</b>
+      <b>160</b>
+      <b>185</b>
+      <b>113</b>
+      <b>58</b>
+      <b>69</b>
+      <b>89</b>
+      <b>213</b>
+      <b>21</b>
+      <b>245</b>
+      <b>16</b>
+      <b>3</b>
+      <b>206</b>
+      <b>232</b>
+    </Hash>
+  </Item>
+  <Item name="PembelianCube.partitions">
+    <Time>635377244410290143</Time>
+    <Hash length="16">
+      <b>176</b>
+      <b>171</b>
+      <b>42</b>
+      <b>193</b>
+      <b>241</b>
+      <b>238</b>
+      <b>67</b>
+      <b>161</b>
+      <b>88</b>
+      <b>125</b>
+      <b>12</b>
+      <b>144</b>
+      <b>122</b>
+      <b>181</b>
+      <b>10</b>
+      <b>228</b>
+    </Hash>
+  </Item>
+  <Item name="Dimensi Vendor.dim">
+    <Time>635377244947710882</Time>
+    <Hash length="16">
+      <b>177</b>
+      <b>222</b>
+      <b>253</b>
+      <b>70</b>
+      <b>194</b>
+      <b>224</b>
+      <b>214</b>
+      <b>12</b>
+      <b>117</b>
+      <b>68</b>
+      <b>143</b>
+      <b>56</b>
+      <b>29</b>
+      <b>189</b>
+      <b>252</b>
+      <b>91</b>
+    </Hash>
+  </Item>
+  <Item name="Dimensi Service Type.dim">
+    <Time>635377243716900484</Time>
+    <Hash length="16">
+      <b>67</b>
+      <b>25</b>
+      <b>40</b>
+      <b>244</b>
+      <b>235</b>
+      <b>199</b>
+      <b>133</b>
+      <b>252</b>
+      <b>45</b>
+      <b>172</b>
+      <b>185</b>
+      <b>253</b>
+      <b>157</b>
+      <b>136</b>
+      <b>159</b>
+      <b>228</b>
+    </Hash>
+  </Item>
+  <Item name="OLAP.ds">
+    <Time>635377233469994394</Time>
+    <Hash length="16">
+      <b>105</b>
+      <b>134</b>
+      <b>39</b>
+      <b>63</b>
+      <b>217</b>
+      <b>97</b>
+      <b>102</b>
+      <b>88</b>
+      <b>201</b>
+      <b>175</b>
+      <b>244</b>
+      <b>151</b>
+      <b>101</b>
+      <b>34</b>
+      <b>94</b>
+      <b>245</b>
+    </Hash>
+  </Item>
+  <Item name="Dimensi Product.dim">
+    <Time>635377243713910313</Time>
+    <Hash length="16">
+      <b>56</b>
+      <b>202</b>
+      <b>124</b>
+      <b>151</b>
+      <b>209</b>
+      <b>131</b>
+      <b>221</b>
+      <b>185</b>
+      <b>149</b>
+      <b>24</b>
+      <b>200</b>
+      <b>121</b>
+      <b>67</b>
+      <b>69</b>
+      <b>239</b>
+      <b>9</b>
+    </Hash>
+  </Item>
+  <Item name="PembelianCube.cube">
+    <Time>635377244949150964</Time>
+    <Hash length="16">
+      <b>116</b>
+      <b>139</b>
+      <b>57</b>
+      <b>102</b>
+      <b>142</b>
+      <b>85</b>
+      <b>224</b>
+      <b>85</b>
+      <b>211</b>
+      <b>191</b>
+      <b>152</b>
+      <b>56</b>
+      <b>89</b>
+      <b>17</b>
+      <b>177</b>
+      <b>22</b>
+    </Hash>
+  </Item>
+  <Item name="OLAPView.dsv">
+    <Time>635377233837115392</Time>
+    <Hash length="16">
+      <b>248</b>
+      <b>52</b>
+      <b>73</b>
+      <b>237</b>
+      <b>67</b>
+      <b>82</b>
+      <b>164</b>
+      <b>86</b>
+      <b>57</b>
+      <b>219</b>
+      <b>224</b>
+      <b>63</b>
+      <b>198</b>
+      <b>86</b>
+      <b>188</b>
+      <b>121</b>
+    </Hash>
+  </Item>
+  <Item name="PenjualanCube.cube">
+    <Time>635377244595860757</Time>
+    <Hash length="16">
+      <b>19</b>
+      <b>96</b>
+      <b>162</b>
+      <b>74</b>
+      <b>198</b>
+      <b>52</b>
+      <b>201</b>
+      <b>148</b>
+      <b>244</b>
+      <b>57</b>
+      <b>66</b>
+      <b>81</b>
+      <b>85</b>
+      <b>1</b>
+      <b>98</b>
+      <b>238</b>
+    </Hash>
+  </Item>
+  <Item name="PenjualanCube.partitions">
+    <Time>635377244597470849</Time>
+    <Hash length="16">
+      <b>52</b>
+      <b>19</b>
+      <b>77</b>
+      <b>161</b>
+      <b>27</b>
+      <b>57</b>
+      <b>106</b>
+      <b>131</b>
+      <b>167</b>
+      <b>162</b>
+      <b>235</b>
+      <b>0</b>
+      <b>131</b>
+      <b>88</b>
+      <b>189</b>
+      <b>76</b>
+    </Hash>
+  </Item>
+  <Item name="Dimensi Employee.dim">
+    <Time>635377235124189009</Time>
+    <Hash length="16">
+      <b>236</b>
+      <b>51</b>
+      <b>124</b>
+      <b>254</b>
+      <b>146</b>
+      <b>214</b>
+      <b>143</b>
+      <b>118</b>
+      <b>150</b>
+      <b>232</b>
+      <b>222</b>
+      <b>184</b>
+      <b>191</b>
+      <b>235</b>
+      <b>182</b>
+      <b>164</b>
+    </Hash>
+  </Item>
+  <Item name="Dimensi Waktu.dim">
+    <Time>635377243716290449</Time>
+    <Hash length="16">
+      <b>202</b>
+      <b>182</b>
+      <b>151</b>
+      <b>83</b>
+      <b>65</b>
+      <b>20</b>
+      <b>217</b>
+      <b>2</b>
+      <b>207</b>
+      <b>171</b>
+      <b>238</b>
+      <b>165</b>
+      <b>32</b>
+      <b>168</b>
+      <b>234</b>
+      <b>60</b>
+    </Hash>
+  </Item>
+  <Item name="LayananServiceCube.cube">
+    <Time>635377243715670413</Time>
+    <Hash length="16">
+      <b>42</b>
+      <b>176</b>
+      <b>55</b>
+      <b>228</b>
+      <b>5</b>
+      <b>100</b>
+      <b>116</b>
+      <b>142</b>
+      <b>140</b>
+      <b>168</b>
+      <b>205</b>
+      <b>44</b>
+      <b>128</b>
+      <b>255</b>
+      <b>22</b>
+      <b>219</b>
+    </Hash>
+  </Item>
+</Infos>

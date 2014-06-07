@@ -1,0 +1,79 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>OLAP</ID>
+        <ConnectionString>Provider=SQLNCLI10.1;Data Source=BRIAN-PC;Integrated Security=SSPI;Initial Catalog=DWH_PROJECT_OLAP</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode>Default</ImpersonationMode>
+          <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dimensi Waktu</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Employee</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Customer</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Product</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Service Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dimensi Vendor</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>LayananServiceCube</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Layanan Service</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Layanan Service</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>PembelianCube</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Pembelian</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Pembelian</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>PenjualanCube</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fakta Penjualan</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fakta Penjualan</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode>Default</ImpersonationMode>
+      <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>

@@ -1,0 +1,186 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6b9004a5-e897-4ff2-a9e2-93977fbea756" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dimensi Waktu</ID>
+  <Name>Dimensi Waktu</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2528" scrolltop="-3889" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8096" y="11351" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="DimensiWaktu" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimensiWaktu" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2528</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3889</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a595a67d-77fc-4947-bf58-9d2ec8b8d53b">
+    <DataSourceViewID>OLAPView</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="fff009ea-022a-4a44-b15d-4ba2b260bb4d">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="a4de7ba2-109e-4403-8914-ce67bf05521c">
+      <ID>Time Code</ID>
+      <Name>Time Code</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="01f7142e-1885-4b5b-a75f-a213f360b2e9">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99711871-296a-40c5-b108-14624b03db98">
+            <TableID>dbo_DimensiWaktu</TableID>
+            <ColumnID>TimeCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="17df5fb1-b1da-4032-9955-044a34f9f8d2">
+          <AttributeID>Date</AttributeID>
+          <Name>Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b06c5ce9-8e77-403d-a843-249cf7799139">
+          <AttributeID>Hari</AttributeID>
+          <Name>Hari</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="32e38e57-75ac-4ef9-b190-5bd6313f6308">
+          <AttributeID>Bulan</AttributeID>
+          <Name>Bulan</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3348ff18-b469-4eef-ac65-c30a7f835a0c">
+          <AttributeID>Kuartal</AttributeID>
+          <Name>Kuartal</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fcfcee24-4641-43e7-a55a-0f1d8eeb273b">
+          <AttributeID>Tahun</AttributeID>
+          <Name>Tahun</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="47953003-e3e7-4318-84ec-67748170d3c8">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e3d0f14e-7294-4575-8ba6-88f3c6f42218">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8b80e92d-71ec-4b6c-a119-78a9d5afac09">
+            <TableID>dbo_DimensiWaktu</TableID>
+            <ColumnID>Date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="6745d08d-3e0b-4a1f-b16e-86ee2949e96e">
+      <ID>Hari</ID>
+      <Name>Hari</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="48eafcd9-df52-472c-9792-8d98d63d9ba0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bb75185b-1aa4-4b7b-9fda-6fe5cf22e027">
+            <TableID>dbo_DimensiWaktu</TableID>
+            <ColumnID>Hari</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="6e5c08c6-5445-4ab2-a292-13b27d83295e">
+      <ID>Bulan</ID>
+      <Name>Bulan</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb7f2921-1da2-4fcc-afd5-b28a0a033042">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c47f2062-077c-4f87-bf28-2656fc3d1a87">
+            <TableID>dbo_DimensiWaktu</TableID>
+            <ColumnID>Bulan</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="1c883e2d-5622-4b11-9fc6-b96b19aa492a">
+      <ID>Kuartal</ID>
+      <Name>Kuartal</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b53c5927-8b3b-44f6-9e71-d878ca6c9019">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="05dbd2d0-7571-4db0-9f1e-1bee8e959b6f">
+            <TableID>dbo_DimensiWaktu</TableID>
+            <ColumnID>Kuartal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="7dc8f7f9-71c6-48b4-aed3-519e51d6c287">
+      <ID>Tahun</ID>
+      <Name>Tahun</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7bf7d0d7-61b7-47ef-a209-033df2386d24">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1b829e21-b292-4b8a-9f2d-dd7c47064ce0">
+            <TableID>dbo_DimensiWaktu</TableID>
+            <ColumnID>Tahun</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+</Dimension>
