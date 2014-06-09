@@ -33,11 +33,9 @@ var AB = {
 	// },
 	
 	instId : '01',
-	loginUri: 'http://localhost/dwhproject/index.php',
-	//imageUri: 'http://localhost/portalstaff/images/',
-	serviceUri: 'http://localhost/dwhproject/',
-	dashboardUri: 'http://localhost/dwhproject/home',
-	//uploadUri: 'http://localhost/useruploads/',
+	loginUri: 'http://localhost:8088/dwhproject/index.php',
+	serviceUri: 'http://localhost:8088/dwhproject/',
+	dashboardUri: 'http://localhost:8088/dwhproject/home',
 	months: ['','January','February','March','April','May','June','July','August','September','October','November','December'],
 	shortMonths: ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
 	
