@@ -30,7 +30,7 @@
 					<div class="icon">
 						<i class="ion ion-bag"></i>
 					</div>
-					<a href="#" class="small-box-footer">
+					<a href="../dwhproject/summary/summaryPurchase" class="small-box-footer">
 						More info <i class="fa fa-arrow-circle-right"></i>
 					</a>
 				</div>
@@ -50,7 +50,7 @@
 					<div class="icon">
 						<i class="ion ion-ios7-cart-outline"></i>
 					</div>
-					<a href="#" class="small-box-footer">
+					<a href="../dwhproject/summary/summarySales" class="small-box-footer">
 						More info <i class="fa fa-arrow-circle-right"></i>
 					</a>
 				</div>
@@ -69,7 +69,7 @@
 					<div class="icon">
 						<i class="ion ion-stats-bars"></i>
 					</div>
-					<a href="#" class="small-box-footer">
+					<a href="../dwhproject/summary/summaryLease" class="small-box-footer">
 						More info <i class="fa fa-arrow-circle-right"></i>
 					</a>
 				</div>
@@ -88,7 +88,7 @@
 					<div class="icon">
 						<i class="ion ion-pie-graph"></i>
 					</div>
-					<a href="#" class="small-box-footer">
+					<a href="../dwhproject/summary/summaryService" class="small-box-footer">
 						More info <i class="fa fa-arrow-circle-right"></i>
 					</a>
 				</div>

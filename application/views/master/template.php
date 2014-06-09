@@ -331,6 +331,7 @@
                                 <li><a href="/dwhproject/purchase/employeeterm"><i class="fa fa-angle-double-right"></i> In Term of Employee</a></li>
                                 <li><a href="/dwhproject/purchase/productterm"><i class="fa fa-angle-double-right"></i> In Term of Product</a></li>
 								<li><a href="/dwhproject/purchase/vendorterm"><i class="fa fa-angle-double-right"></i> In Term of Vendor</a></li>
+								<li><a href="/dwhproject/purchase/purchaseReport"><i class="fa fa-angle-double-right"></i>All Purchase report</a></li>
                             </ul>
                         </li>
 						
