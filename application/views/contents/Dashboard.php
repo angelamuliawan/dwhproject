@@ -18,13 +18,13 @@
 		<div class="row">
 			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->
-				<div class="small-box bg-aqua">
+				<div class="small-box bg-aqua" id="btnSummaryPurchase">
 					<div class="inner">
 						<h3>
-							34
+							2014
 						</h3>
 						<p>
-							Purchase Today
+							Purchase
 						</p>
 					</div>
 					<div class="icon">
@@ -38,13 +38,13 @@
 			
 			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->
-				<div class="small-box bg-blue">
+				<div class="small-box bg-blue" id="btnSummarySales">
 					<div class="inner">
 						<h3>
-							230
+							2014
 						</h3>
 						<p>
-							Sales Today
+							Sales
 						</p>
 					</div>
 					<div class="icon">
@@ -57,13 +57,13 @@
 			</div><!-- ./col -->
 			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->
-				<div class="small-box bg-green">
+				<div class="small-box bg-green" id="btnSummaryLease">
 					<div class="inner">
 						<h3>
-							48
+							2014
 						</h3>
 						<p>
-							Lease Today
+							Lease
 						</p>
 					</div>
 					<div class="icon">
@@ -76,13 +76,13 @@
 			</div><!-- ./col -->
 			<div class="col-lg-3 col-xs-6">
 				<!-- small box -->
-				<div class="small-box bg-red">
+				<div class="small-box bg-red" id="btnSummaryService">
 					<div class="inner">
 						<h3>
-							65
+							2014
 						</h3>
 						<p>
-							Service Today
+							Service
 						</p>
 					</div>
 					<div class="icon">
@@ -97,3 +97,20 @@
 
 	</section><!-- /.content -->
 </aside><!-- /.right-side -->
+
+<script type="text/javascript">
+
+	$("#btnSummaryPurchase").click(function(){
+		location.href = "../dwhproject/summary/summaryPurchase";
+	});
+	$("#btnSummaryService").click(function(){
+		location.href = "../dwhproject/summary/summaryService";
+	});
+	$("#btnSummaryLease").click(function(){
+		location.href = "../dwhproject/summary/summaryLease";
+	});
+	$("#btnSummarySales").click(function(){
+		location.href = "../dwhproject/summary/summarySales";
+	});
+
+</script>

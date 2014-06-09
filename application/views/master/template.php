@@ -47,7 +47,7 @@
     <body class="skin-black animated fadeInRight">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="../dwhproject/home" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Warehouse System
             </a>
@@ -312,7 +312,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="/dwhproject/">
+                            <a href="/dwhproject/home">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
