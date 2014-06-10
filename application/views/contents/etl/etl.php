@@ -153,4 +153,4 @@
 </aside>
 <!-- /.right-side -->
 
-<script src="../../dwhproject/media/js/ContentJS/service/serviceReport.js"></script>
+<script src="../../dwhproject/media/js/ContentJS/etl/etl.js"></script>
