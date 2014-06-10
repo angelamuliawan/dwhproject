@@ -166,7 +166,7 @@
                     <div class="box-body">
                         <div class="chart-content">
                             <div class="chart-pane">
-								<div id="purchaseReportContainer"></div>
+								<div id="purchaseReportContainer" style="overflow-x:auto;z"></div>
                                 <!--<div id="chartContainer" class="chart-case-container" style="width: 100%; height: 440px;"></div>-->
                             </div>
                         </div>
