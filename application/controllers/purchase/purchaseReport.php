@@ -23,11 +23,64 @@ class PurchaseReport extends AB_Controller {
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}
 	
-	public function getSummaryPurchaseDynamic(){
+	public function getSummaryPurchaseDynamicPerYear(){
 		$post = $this->rest->post();
 		$res = $this->sp('Summary_Pembelian_Dynamic_PerYear', array
 			(
 				'year' => $post->year,
+				'isSelectedEmployee' => $post->isSelectedEmployee,
+				'isSelectedVendor' => $post->isSelectedVendor,
+				'isSelectedProduct' => $post->isSelectedProduct,
+				'list_column_employee' => $post->list_column_employee,
+				'list_column_vendor' => $post->list_column_vendor,
+				'list_column_product' => $post->list_column_product
+			)
+		);
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+
+	public function getSummaryPurchaseDynamicPerQuarter(){
+		$post = $this->rest->post();
+		$res = $this->sp('Summary_Pembelian_Dynamic_PerQuarter', array
+			(
+				'year' => $post->year,
+				'quarter' => $post->quarter,
+				'isSelectedEmployee' => $post->isSelectedEmployee,
+				'isSelectedVendor' => $post->isSelectedVendor,
+				'isSelectedProduct' => $post->isSelectedProduct,
+				'list_column_employee' => $post->list_column_employee,
+				'list_column_vendor' => $post->list_column_vendor,
+				'list_column_product' => $post->list_column_product
+			)
+		);
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+
+	public function getSummaryPurchaseDynamicPerMonth(){
+		$post = $this->rest->post();
+		$res = $this->sp('Summary_Pembelian_Dynamic_PerMonth', array
+			(
+				'year' => $post->year,
+				'month' => $post->month,
+				'isSelectedEmployee' => $post->isSelectedEmployee,
+				'isSelectedVendor' => $post->isSelectedVendor,
+				'isSelectedProduct' => $post->isSelectedProduct,
+				'list_column_employee' => $post->list_column_employee,
+				'list_column_vendor' => $post->list_column_vendor,
+				'list_column_product' => $post->list_column_product
+			)
+		);
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+
+	public function getSummaryPurchaseDynamicPerDate(){
+		$post = $this->rest->post();
+		$res = $this->sp('Summary_Pembelian_Dynamic_PerDate', array
+			(
+				'date' => $post->date,
 				'isSelectedEmployee' => $post->isSelectedEmployee,
 				'isSelectedVendor' => $post->isSelectedVendor,
 				'isSelectedProduct' => $post->isSelectedProduct,
