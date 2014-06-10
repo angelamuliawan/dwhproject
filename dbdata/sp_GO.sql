@@ -4,7 +4,7 @@
 -- Description : mengambil data fakta layanan service secara dinamis berdasarkan kolom yang dicentang.  
 -- Testing  : Summary_Service_Dynamic_PerYear @year='2010', @isSelectedEmployee=1, @isSelectedCustomer=0, @isSelectedProduct=0, @isSelectedServiceType=0, @list_column_employee='de.EmployeeName,', @list_column_customer='', @list_column_product='', @list_column_service_type=''  
 -- =============================================  
-ALTER PROCEDURE [dbo].[Summary_Service_Dynamic_PerYear]  
+CREATE PROCEDURE [dbo].[Summary_Service_Dynamic_PerYear]  
  -- Add the parameters for the stored procedure here  
  @year varchar(4),  
  @isSelectedEmployee int,  

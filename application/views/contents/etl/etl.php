@@ -10,7 +10,7 @@
 	<section class="content-header">
 		<h1>
             ETL
-            <small>Extract - Transform - Load</small>
+            <all>Extract - Transform - Load</all>
         </h1>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a>
@@ -22,7 +22,7 @@
 	
 	<!-- Main content -->
 	<section class="content">
-		<button class="btn btn-success btnTimeTerm" referTo="formYear">ETL Now</button>
+		<button class="btn btn-success btnETLNow" >ETL Now</button>
 		<h4 class="page-header">
            Dimensi
         </h4>
@@ -31,27 +31,27 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Dimensi Waktu</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h4>Dimensi Customer</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h4>Dimensi Employee</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
@@ -64,35 +64,35 @@
 
 				<div class="col-md-4">
 					<h4>Dimensi Vendor</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<h4>Dimensi Product</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h4>Dimensi Service Type</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h4>Dimensi Computer Rent</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
@@ -110,27 +110,28 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Fakta Pembelian</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" id="faktaPembelian" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
+						
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h4>Fakta Penjualan</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" id="faktaPenjualan" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h4>Fakta Layanan Service</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" id="faktaLayananService" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>
@@ -139,9 +140,9 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Fakta Penyewaan</h4>
-					<div class="progress sm progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
+					<div class="progress  progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar" id="faktaPenyewaan" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+							
 						</div>
 					</div>
 				</div>

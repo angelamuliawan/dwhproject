@@ -1,77 +1,63 @@
-
-var dbDataSource;
 $(document).ready(function () {
-	//reloadChart();
-	//$('#daterange').daterangepicker();
 
-	$(".btn.btn-success.btnTimeTerm").click(function () {
-		var form = $(this).attr('referTo');
-		$("form[role='form']").slideUp();
-		$("#" + form).slideDown();
-	});
-
-	$(".icheckbox_flat-red.checked.chkEmployee").click(function () {
-		var curFormGroup = $(this).closest("div.form-group");
-		// curFormGroup.children().each(function(){
-		// $(this).find(".icheckbox_flat-red.checked.chkEmployee").children().attr('aria-checked'));
-		// });
-	});
-
-	$(".icheckbox_flat-red.checked.chkVendor").click(function () {
-		var curFormGroup = $(this).closest("div.form-group");
-		// curFormGroup.children().each(function(){
-		// $(this).find(".icheckbox_flat-red.checked.chkEmployee").children().attr('aria-checked'));
-		// });
-	});
-
-	$(".icheckbox_flat-red.checked.chkProduct").click(function () {
-		var curFormGroup = $(this).closest("div.form-group");
-		// curFormGroup.children().each(function(){
-		// $(this).find(".icheckbox_flat-red.checked.chkEmployee").children().attr('aria-checked'));
-		// });
-	});
-
-
-	$("#btnSubmitServiceReportPerYear").click(function (e) {
+	$(".btnETLNow").click(function (e) {
 		e.preventDefault();
+		console.log("button");
+		var faktaPembelian = $("#faktaPembelian");
+		var faktaPenjualan = $("#faktaPenjualan");
+		var faktaLayananService = $("#faktaLayananService");
+		var faktaPenyewaan = $("#faktaPenyewaan");
 
 		AB.ajax({
-			url: AB.serviceUri + 'service/serviceReport/getSummaryServiceDynamic',
+			url: AB.serviceUri + 'etl/main/proses_faktapembelian',
 			type: 'post',
-			dataType: 'json',
-			data: JSON.stringify(objParam),
-			contentType: 'application/json;charset=utf-8',
+			beforeSend: function (xhr) {
+				faktaPembelian.css("width", Math.floor((Math.random() * 100) + 1) + "%");
+			},
 			success: function (data) {
-				//console.table(data);
-				dbDataSource = data;
-				webix.ready(function () {
-					webix.ui({
-						container: "serviceReportContainer",
-						id: "pivot",
-						view: "pivot-chart",
-						height: 350,
-						width: 1300,
-						structure: {
-							groupBy: "Bulan",
-							values: [{
-								name: "Jumlah",
-								operation: "max",
-								color: "#eed236"
-							}, {
-								name: "Total",
-								operation: "max",
-								color: "#36abee"
-							}],
-							filters: [{
-								name: "Jumlah",
-								type: "select"
-							}]
-						},
-						data: dbDataSource
-					});
-				});
+				faktaPembelian.css("width", "100%");
+				faktaPembelian.append(data[0].RowAffected + " record(s) inserted");
 			}
 		});
+		
+		AB.ajax({
+			url: AB.serviceUri + 'etl/main/proses_faktapenjualan',
+			type: 'post',
+			beforeSend: function (xhr) {
+				faktaPenjualan.css("width", Math.floor((Math.random() * 100) + 1) + "%");
+			},
+			success: function (data) {
+				faktaPenjualan.css("width", "100%");
+				faktaPenjualan.append(data[0].RowAffected + " record(s) inserted");
+			}
+		});
+
+		
+		AB.ajax({
+			url: AB.serviceUri + 'etl/main/proses_faktalayananservice',
+			type: 'post',
+			beforeSend: function (xhr) {
+				faktaLayananService.css("width", Math.floor((Math.random() * 100) + 1) + "%");
+			},
+			success: function (data) {
+				faktaLayananService.css("width", "100%");
+				faktaLayananService.append(data[0].RowAffected + " record(s) inserted");
+			}
+		});
+
+		
+		AB.ajax({
+			url: AB.serviceUri + 'etl/main/proses_faktapenyewaan',
+			type: 'post',
+			beforeSend: function (xhr) {
+				faktaPenyewaan.css("width", Math.floor((Math.random() * 100) + 1) + "%");
+			},
+			success: function (data) {
+				faktaPenyewaan.css("width", "100%");
+				faktaPenyewaan.append(data[0].RowAffected + " record(s) inserted");
+			}
+		});
+
 
 	});
 });
