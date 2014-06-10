@@ -32,10 +32,7 @@ class ServiceReport extends AB_Controller {
 				'isSelectedCustomer' => $post->isSelectedCustomer,
 				'isSelectedProduct' => $post->isSelectedProduct,
 				'isSelectedServiceType' => $post->isSelectedServiceType,
-				'list_column_employee' => $post->list_column_employee,
-				'list_column_customer' => $post->list_column_customer,
-				'list_column_product' => $post->list_column_product,
-				'list_column_service_type' => $post->list_column_service_type
+				'list_column' => $post->list_column
 			)
 		);
 		$data = $res -> result();
