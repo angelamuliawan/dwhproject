@@ -16,6 +16,7 @@ $(document).ready(function () {
 			},
 			success: function (data) {
 				faktaPembelian.css("width", "100%");
+				faktaPembelian.html("");
 				faktaPembelian.append(data[0].RowAffected + " record(s) inserted");
 			}
 		});
@@ -28,6 +29,7 @@ $(document).ready(function () {
 			},
 			success: function (data) {
 				faktaPenjualan.css("width", "100%");
+				faktaPenjualan.html("");
 				faktaPenjualan.append(data[0].RowAffected + " record(s) inserted");
 			}
 		});
@@ -41,6 +43,7 @@ $(document).ready(function () {
 			},
 			success: function (data) {
 				faktaLayananService.css("width", "100%");
+				faktaLayananService.html("");
 				faktaLayananService.append(data[0].RowAffected + " record(s) inserted");
 			}
 		});
@@ -54,6 +57,7 @@ $(document).ready(function () {
 			},
 			success: function (data) {
 				faktaPenyewaan.css("width", "100%");
+				faktaPenyewaan.html("");
 				faktaPenyewaan.append(data[0].RowAffected + " record(s) inserted");
 			}
 		});
