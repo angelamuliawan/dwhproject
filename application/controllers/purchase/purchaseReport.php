@@ -25,7 +25,7 @@ class PurchaseReport extends AB_Controller {
 	
 	public function getSummaryPurchaseDynamic(){
 		$post = $this->rest->post();
-		$res = $this->sp('Summary_Pembelian_Dynamic', array
+		$res = $this->sp('Summary_Pembelian_Dynamic_PerYear', array
 			(
 				'year' => $post->year,
 				'isSelectedEmployee' => $post->isSelectedEmployee,

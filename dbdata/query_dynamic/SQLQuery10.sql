@@ -40,9 +40,9 @@ BEGIN
 	--set @isSelectedVendor = 1;
 	--set @isSelectedProduct = 1;
 
-	declare @list_column_employee nvarchar(1000);
-	declare @list_column_vendor nvarchar(1000);
-	declare @list_column_product nvarchar(1000);
+	--declare @list_column_employee nvarchar(1000);
+	--declare @list_column_vendor nvarchar(1000);
+	--declare @list_column_product nvarchar(1000);
 
 
 	--set @list_column_employee = 'de.EmployeeName,de.EmployeeSalary,';
@@ -51,7 +51,7 @@ BEGIN
 	--set @list_column_employee = 'de.EmployeeName,';
 	--set @list_column_vendor = '';
 	--set @list_column_product = '';
-	set @year = '2013';
+	--set @year = '2013';
 
 	declare @query_select nvarchar(1000);
 	declare @query_from nvarchar(1000);
@@ -62,7 +62,7 @@ BEGIN
 	'
 	SELECT
 		Bulan = DATENAME(month, DATEADD(month,dwa.Bulan, 0)-1),
-		JumlahPeralatanKomputerDibeli = SUM(fp.JumlahPeralatanKomputerDibeli),  
+		JumlahPeralatanKomputer = SUM(fp.JumlahPeralatanKomputerDibeli),  
 		TotalPembelianPeralatanKomputer = CAST(SUM(fp.TotalPembelianPeralatanKomputer) / 1000000 AS INT), 
 		' + @list_column_employee + ' ' + @list_column_vendor + ' ' + @list_column_product + '
 	'

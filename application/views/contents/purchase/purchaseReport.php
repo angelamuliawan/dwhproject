@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/dwhproject/media/js/webix/codebase/pivotchart.css" type="text/css" charset="utf-8">
 <script src="/dwhproject/media/js/webix/codebase/webix.js" type="text/javascript" charset="utf-8"></script>
 <script src="/dwhproject/media/js/webix/codebase/pivotchart.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="/dwhproject/media/js/webix/common/samples.css" type="text/css" charset="utf-8">
 
 <!-- Right side column. Contains the navbar and content of the page -->
 <aside class="right-side">                
@@ -160,12 +161,12 @@
                 <div class="box box-primary">
                     <div class="box-header">
                         <i class="fa fa-bar-chart-o"></i>
-                        <h3 class="box-title">Pie Chart</h3>
+                        <h3 class="box-title">Report Chart</h3>
                     </div>
                     <div class="box-body">
                         <div class="chart-content">
                             <div class="chart-pane">
-								<div id="testA"></div>
+								<div id="purchaseReportContainer"></div>
                                 <!--<div id="chartContainer" class="chart-case-container" style="width: 100%; height: 440px;"></div>-->
                             </div>
                         </div>
