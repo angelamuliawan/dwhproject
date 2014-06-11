@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class ServiceReport extends AB_Controller {
+class Main extends AB_Controller {
 
 	/**
 	* Index Page for this controller.
@@ -19,20 +19,21 @@ class ServiceReport extends AB_Controller {
 	*/
 	public function index()
 	{
-		$pageContent = $this->load->view('contents/service/serviceReport','',TRUE);
+		$pageContent = $this->load->view('contents/etl/etl','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}
 	
-	public function getSummaryServiceDynamic(){
+	public function getSummaryPurchaseDynamic(){
 		$post = $this->rest->post();
-		$res = $this->sp('Summary_Service_Dynamic_PerYear', array
+		$res = $this->sp('Summary_Pembelian_Dynamic_PerYear', array
 			(
 				'year' => $post->year,
 				'isSelectedEmployee' => $post->isSelectedEmployee,
-				'isSelectedCustomer' => $post->isSelectedCustomer,
+				'isSelectedVendor' => $post->isSelectedVendor,
 				'isSelectedProduct' => $post->isSelectedProduct,
-				'isSelectedServiceType' => $post->isSelectedServiceType,
-				'list_column' => $post->list_column
+				'list_column_employee' => $post->list_column_employee,
+				'list_column_vendor' => $post->list_column_vendor,
+				'list_column_product' => $post->list_column_product
 			)
 		);
 		$data = $res -> result();
