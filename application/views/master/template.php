@@ -321,18 +321,11 @@
                                 <i class="fa fa-adjust"></i> <span>ETL</span>
                             </a>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
+                        <li class="">
+                            <a href="/dwhproject/purchase/purchaseReport">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Purchase Report</span>
-                                <i class="fa fa-angle-left pull-right"></i>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="/dwhproject/purchase/employeeterm"><i class="fa fa-angle-double-right"></i> In Term of Employee</a></li>
-                                <li><a href="/dwhproject/purchase/productterm"><i class="fa fa-angle-double-right"></i> In Term of Product</a></li>
-								<li><a href="/dwhproject/purchase/vendorterm"><i class="fa fa-angle-double-right"></i> In Term of Vendor</a></li>
-								<li><a href="/dwhproject/purchase/purchaseReport"><i class="fa fa-angle-double-right"></i>All Purchase report</a></li>
-                            </ul>
                         </li>
 						
 						<li class="treeview">
@@ -364,9 +357,7 @@
                             <a href="/dwhproject/service/serviceReport">
                                 <i class="fa fa-dashboard"></i>
                                 <span>Service Report</span>
-                              
                             </a>
-                           
                         </li>
 						
                     </ul>
