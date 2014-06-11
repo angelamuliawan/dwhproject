@@ -9,13 +9,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Purchase Report
+            Service Report
             <small>View report related to purchase.</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Purchase Report</a></li>
-            <li class="active">Employee Term</li>
+            <li><a href="#">Service Report</a></li>
+            <li class="active">All Term</li>
         </ol>
     </section>
 
@@ -35,7 +35,7 @@
                     <form role="form" id="formYear">
                         <div class="form-group">
 							<label>Choose Year</label>
-							<select class="form-control" id="ddlYear1">
+							<select class="form-control" id="ddlYear">
 								<option>2010</option>
 								<option>2011</option>
 								<option>2012</option>
@@ -43,13 +43,13 @@
 								<option>2014</option>
 							</select>
 						</div>
-						<button class="btn btn-success" id="btnSubmitPurchaseReportPerYear">Show purchase report</button><br/><br/>
+						<button class="btn btn-success" id="btnSubmitServiceReportPerYear">Show purchase report</button><br/><br/>
                     </form>
 					
 					<form role="form" id="formQuarter" style="display:none;">
                         <div class="form-group">
 							<label>Choose Year</label>
-							<select class="form-control" id="ddlYear2">
+							<select class="form-control">
 								<option>2010</option>
 								<option>2011</option>
 								<option>2012</option>
@@ -59,11 +59,11 @@
 						</div>
 						<div class="form-group">
 							<label>Choose Quarter</label>
-							<select class="form-control" id="ddlQuarter">
-								<option value="1">January to March (Quarter 1)</option>
-								<option value="2">April to June (Quarter 2)</option>
-								<option value="3">July to September (Quarter 3)</option>
-								<option value="4">October to December (Quarter 4)</option>
+							<select class="form-control">
+								<option>January to March (Quarter 1)</option>
+								<option>April to June (Quarter 2)</option>
+								<option>July to September (Quarter 3)</option>
+								<option>October to December (Quarter 4)</option>
 							</select>
 						</div>
 						<button class="btn btn-success" id="btnSubmitPurchaseReportPerQuarter">Show purchase report</button><br/><br/>
@@ -72,7 +72,7 @@
 					<form role="form" id="formMonth" style="display:none;">
                         <div class="form-group">
 							<label>Choose Year</label>
-							<select class="form-control" id="ddlYear3">
+							<select class="form-control">
 								<option>2010</option>
 								<option>2011</option>
 								<option>2012</option>
@@ -82,7 +82,7 @@
 						</div>
 						<div class="form-group">
 							<label>Choose Month</label>
-							<select class="form-control" id="ddlMonth">
+							<select class="form-control">
 								<option value="1">January</option>
 								<option value="2">February</option>
 								<option value="3">March</option>
@@ -92,7 +92,7 @@
 								<option value="7">July</option>
 								<option value="8">August</option>
 								<option value="9">September</option>
-								<option value="10">October</option>
+								<option value="10"October</option>
 								<option value="11">November</option>
 								<option value="12">December</option>
 							</select>
@@ -106,7 +106,7 @@
 								<div class="input-group-addon">
 									<i class="fa fa-calendar"></i>
 								</div>
-								<input type="text" data-mask="" id="txtDatePurchase" data-inputmask="'alias': 'mm/dd/yyyy'" class="form-control">
+								<input type="text" data-mask="" data-inputmask="'alias': 'mm/dd/yyyy'" class="form-control">
 							</div><!-- /.input group -->
 						</div>
 						<button class="btn btn-success" id="btnSubmitPurchaseReportPerDate">Show purchase report</button><br/><br/>
@@ -128,13 +128,21 @@
 							<div class="icheckbox_flat-red checked chkEmployee" data-value="de.EmployeeJoinDate," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox" class="flat-red cbEmployee" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Employee Join Date</div>
 						</label>
 					</div>
-					<b>Vendor Term</b>
-					<input type="hidden" id="isSelectedVendor" value="1" />
-					<div class="form-group" id="formColumnVendor">
+					
+					
+					
+					<b>Customer Term</b>
+					<input type="hidden" id="isSelectedCustomer" value="1" />
+					<div class="form-group" id="formColumnCustomer">
 						<label class="">
-							<div class="icheckbox_flat-red checked chkVendor" data-value="dv.VendorName," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox" class="flat-red" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Vendor Name</div>
+							<div class="icheckbox_flat-red checked chkCustomer" data-value="dc.CustomerName," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox" class="flat-red cbCustomer" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Customer Name</div>
+						</label>
+						<label class="">
+							<div class="icheckbox_flat-red checked chkCustomer" data-value="dc.CustomerGender," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox"  class="flat-red cbCustomer" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Customer Gender</div>
 						</label>
 					</div>
+					
+					
 					<b>Product Term</b>
 					<input type="hidden" id="isSelectedProduct" value="1" />
 					<div class="form-group" id="formColumnProduct">
@@ -151,6 +159,20 @@
 							<div class="icheckbox_flat-red checked chkProduct" data-value="dp.ProductTypeName," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox" class="flat-red" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Product Type Name</div>
 						</label>
 					</div>
+					
+					
+					
+					<b>Service Type Term</b>
+					<input type="hidden" id="isSelectedServiceType" value="1" />
+					<div class="form-group" id="formColumnServiceType">
+						<label class="">
+							<div class="icheckbox_flat-red checked chkServiceType" data-value="dst.ServiceTypeName," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox" class="flat-red cbServiceType" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Service Type Name</div>
+						</label>
+						<label class="">
+							<div class="icheckbox_flat-red checked chkServiceType" data-value="dst.ServiceTypePrice," style="position: relative;" aria-checked="false" aria-disabled="false"><input type="checkbox"  class="flat-red cbServiceType" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;"></ins>&nbsp;&nbsp;Service Type Price</div>
+						</label>
+					</div>
+					
                 </div>
             </div>
         </div>
@@ -166,7 +188,7 @@
                     <div class="box-body">
                         <div class="chart-content">
                             <div class="chart-pane">
-								<div id="purchaseReportContainer" style="overflow-x:auto;z"></div>
+								<div id="serviceReportContainer"></div>
                                 <!--<div id="chartContainer" class="chart-case-container" style="width: 100%; height: 440px;"></div>-->
                             </div>
                         </div>
@@ -177,4 +199,4 @@
     </section><!-- /.content -->
 </aside><!-- /.right-side -->
 
-<script src="../../dwhproject/media/js/ContentJS/purchase/purchaseReport.js"></script>
+<script src="../../dwhproject/media/js/ContentJS/service/serviceReport.js"></script>

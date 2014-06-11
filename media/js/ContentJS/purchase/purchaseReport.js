@@ -41,25 +41,311 @@ $(document).ready(function(){
 	
 	$(".icheckbox_flat-red.checked.chkEmployee").click(function(){
 		var curFormGroup = $(this).closest("div.form-group");
-		// curFormGroup.children().each(function(){
-			// $(this).find(".icheckbox_flat-red.checked.chkEmployee").children().attr('aria-checked'));
-		// });
 	});
 	
 	$(".icheckbox_flat-red.checked.chkVendor").click(function(){
 		var curFormGroup = $(this).closest("div.form-group");
-		// curFormGroup.children().each(function(){
-			// $(this).find(".icheckbox_flat-red.checked.chkEmployee").children().attr('aria-checked'));
-		// });
 	});
 	
 	$(".icheckbox_flat-red.checked.chkProduct").click(function(){
 		var curFormGroup = $(this).closest("div.form-group");
-		// curFormGroup.children().each(function(){
-			// $(this).find(".icheckbox_flat-red.checked.chkEmployee").children().attr('aria-checked'));
-		// });
 	});
+
 	
+	$("#btnSubmitPurchaseReportPerDate").click(function(e){
+		e.preventDefault();
+		var curFormGroupEmployee = $("#formColumnEmployee");
+		var curFormGroupVendor = $("#formColumnVendor");
+		var curFormGroupProduct = $("#formColumnProduct");
+		
+		var totalCheckedColumnEmployee = 0;
+		var totalCheckedColumnVendor = 0;
+		var totalCheckedColumnProduct = 0;
+		
+		var list_column_employee = '';
+		var list_column_vendor = '';
+		var list_column_product = '';
+		
+		curFormGroupEmployee.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkEmployee").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnEmployee++;
+				list_column_employee = list_column_employee + $(this).children().attr('data-value');
+			}
+		});
+		curFormGroupVendor.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkVendor").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnVendor++;
+				list_column_vendor = list_column_vendor + $(this).children().attr('data-value');
+			}
+		});
+		curFormGroupProduct.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkProduct").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnProduct++;
+				list_column_product = list_column_product + $(this).children().attr('data-value');
+			}
+		});
+
+		// remove last character from string, substring until comma
+		if(list_column_product == ''){
+			if(list_column_vendor == '' && list_column_employee != ''){
+				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+			}
+			else if(list_column_vendor != '' && list_column_employee != ''){
+				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
+			}
+			else if(list_column_vendor != '' && list_column_employee == ''){
+				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
+			}
+		}
+		else if(list_column_product != ''){
+			list_column_product = list_column_product.substr(0,list_column_product.length-1);
+		}
+		
+		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+		
+		
+		var date = $("#txtDatePurchase").val();
+		var isSelectedEmployee = (totalCheckedColumnEmployee > 0) ? 1 : 0;
+		var isSelectedVendor = (totalCheckedColumnVendor > 0) ? 1 : 0;;
+		var isSelectedProduct = (totalCheckedColumnProduct > 0) ? 1 : 0;;
+		
+		var objParam = {
+			'date' : date,
+			'isSelectedEmployee' : isSelectedEmployee,
+			'isSelectedVendor' : isSelectedVendor,
+			'isSelectedProduct' : isSelectedProduct,
+			'list_column_employee' : list_column_employee,
+			'list_column_vendor' : list_column_vendor,
+			'list_column_product' : list_column_product
+		}
+
+		AB.ajax({
+			url: AB.serviceUri + 'purchase/purchaseReport/getSummaryPurchaseDynamicPerDate',
+			type: 'post',
+			dataType: 'json',
+			data: JSON.stringify(objParam),
+			contentType: 'application/json;charset=utf-8',
+			success:function(data){
+				//console.table(data);
+				// color: "#eed236"
+				// color: "#36abee"
+				dbDataSource = data;
+				webix.ready(function(){
+					webix.ui({
+						container:"purchaseReportContainer",
+						id:"pivot",
+						view:"pivot-chart",
+						height:350,
+						width:1300,
+						structure:{
+							groupBy: "Tanggal",
+							values: [{name:"Jumlah", operation:"max"},{name:"Total", operation:"max"}],
+							filters:[{name:"Jumlah", type:"select"}]
+						},
+						data: dbDataSource
+					});
+				});
+			}
+		});
+	});	
+
+	$("#btnSubmitPurchaseReportPerQuarter").click(function(e){
+		e.preventDefault();
+		var curFormGroupEmployee = $("#formColumnEmployee");
+		var curFormGroupVendor = $("#formColumnVendor");
+		var curFormGroupProduct = $("#formColumnProduct");
+		
+		var totalCheckedColumnEmployee = 0;
+		var totalCheckedColumnVendor = 0;
+		var totalCheckedColumnProduct = 0;
+		
+		var list_column_employee = '';
+		var list_column_vendor = '';
+		var list_column_product = '';
+		
+		curFormGroupEmployee.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkEmployee").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnEmployee++;
+				list_column_employee = list_column_employee + $(this).children().attr('data-value');
+			}
+		});
+		curFormGroupVendor.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkVendor").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnVendor++;
+				list_column_vendor = list_column_vendor + $(this).children().attr('data-value');
+			}
+		});
+		curFormGroupProduct.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkProduct").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnProduct++;
+				list_column_product = list_column_product + $(this).children().attr('data-value');
+			}
+		});
+
+		// remove last character from string, substring until comma
+		if(list_column_product == ''){
+			if(list_column_vendor == '' && list_column_employee != ''){
+				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+			}
+			else if(list_column_vendor != '' && list_column_employee != ''){
+				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
+			}
+			else if(list_column_vendor != '' && list_column_employee == ''){
+				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
+			}
+		}
+		else if(list_column_product != ''){
+			list_column_product = list_column_product.substr(0,list_column_product.length-1);
+		}
+		
+		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+		
+		
+		var year = $("#ddlYear2 option:selected").text();
+		var quarter = $("#ddlQuarter option:selected").val();
+		var isSelectedEmployee = (totalCheckedColumnEmployee > 0) ? 1 : 0;
+		var isSelectedVendor = (totalCheckedColumnVendor > 0) ? 1 : 0;;
+		var isSelectedProduct = (totalCheckedColumnProduct > 0) ? 1 : 0;;
+		
+		var objParam = {
+			'year' : year,
+			'quarter' : quarter,
+			'isSelectedEmployee' : isSelectedEmployee,
+			'isSelectedVendor' : isSelectedVendor,
+			'isSelectedProduct' : isSelectedProduct,
+			'list_column_employee' : list_column_employee,
+			'list_column_vendor' : list_column_vendor,
+			'list_column_product' : list_column_product
+		}
+
+		AB.ajax({
+			url: AB.serviceUri + 'purchase/purchaseReport/getSummaryPurchaseDynamicPerQuarter',
+			type: 'post',
+			dataType: 'json',
+			data: JSON.stringify(objParam),
+			contentType: 'application/json;charset=utf-8',
+			success:function(data){
+				//console.table(data);
+				// color: "#eed236"
+				// color: "#36abee"
+				dbDataSource = data;
+				webix.ready(function(){
+					webix.ui({
+						container:"purchaseReportContainer",
+						id:"pivot",
+						view:"pivot-chart",
+						height:350,
+						width:1300,
+						structure:{
+							groupBy: "Bulan",
+							values: [{name:"Jumlah", operation:"max"},{name:"Total", operation:"max"}],
+							filters:[{name:"Jumlah", type:"select"}]
+						},
+						data: dbDataSource
+					});
+				});
+			}
+		});
+	});	
+	
+	$("#btnSubmitPurchaseReportPerMonth").click(function(e){
+		e.preventDefault();
+		var curFormGroupEmployee = $("#formColumnEmployee");
+		var curFormGroupVendor = $("#formColumnVendor");
+		var curFormGroupProduct = $("#formColumnProduct");
+		
+		var totalCheckedColumnEmployee = 0;
+		var totalCheckedColumnVendor = 0;
+		var totalCheckedColumnProduct = 0;
+		
+		var list_column_employee = '';
+		var list_column_vendor = '';
+		var list_column_product = '';
+		
+		curFormGroupEmployee.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkEmployee").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnEmployee++;
+				list_column_employee = list_column_employee + $(this).children().attr('data-value');
+			}
+		});
+		curFormGroupVendor.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkVendor").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnVendor++;
+				list_column_vendor = list_column_vendor + $(this).children().attr('data-value');
+			}
+		});
+		curFormGroupProduct.children().each(function(){
+			if($(this).find(".icheckbox_flat-red.chkProduct").children().attr('aria-checked') == 'true'){
+				totalCheckedColumnProduct++;
+				list_column_product = list_column_product + $(this).children().attr('data-value');
+			}
+		});
+
+		// remove last character from string, substring until comma
+		if(list_column_product == ''){
+			if(list_column_vendor == '' && list_column_employee != ''){
+				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+			}
+			else if(list_column_vendor != '' && list_column_employee != ''){
+				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
+			}
+			else if(list_column_vendor != '' && list_column_employee == ''){
+				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
+			}
+		}
+		else if(list_column_product != ''){
+			list_column_product = list_column_product.substr(0,list_column_product.length-1);
+		}
+		
+		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+		
+		
+		var year = $("#ddlYear3 option:selected").text();
+		var month = $("#ddlMonth option:selected").val();
+		var isSelectedEmployee = (totalCheckedColumnEmployee > 0) ? 1 : 0;
+		var isSelectedVendor = (totalCheckedColumnVendor > 0) ? 1 : 0;;
+		var isSelectedProduct = (totalCheckedColumnProduct > 0) ? 1 : 0;;
+		
+		var objParam = {
+			'year' : year,
+			'month' : month,
+			'isSelectedEmployee' : isSelectedEmployee,
+			'isSelectedVendor' : isSelectedVendor,
+			'isSelectedProduct' : isSelectedProduct,
+			'list_column_employee' : list_column_employee,
+			'list_column_vendor' : list_column_vendor,
+			'list_column_product' : list_column_product
+		}
+
+		AB.ajax({
+			url: AB.serviceUri + 'purchase/purchaseReport/getSummaryPurchaseDynamicPerMonth',
+			type: 'post',
+			dataType: 'json',
+			data: JSON.stringify(objParam),
+			contentType: 'application/json;charset=utf-8',
+			success:function(data){
+				//console.table(data);
+				// color: "#eed236"
+				// color: "#36abee"
+				dbDataSource = data;
+				webix.ready(function(){
+					webix.ui({
+						container:"purchaseReportContainer",
+						id:"pivot",
+						view:"pivot-chart",
+						height:350,
+						width:1300,
+						structure:{
+							groupBy: "Hari",
+							values: [{name:"Jumlah", operation:"max"},{name:"Total", operation:"max"}],
+							filters:[{name:"Jumlah", type:"select"}]
+						},
+						data: dbDataSource
+					});
+				});
+			}
+		});
+	});	
 	
 	$("#btnSubmitPurchaseReportPerYear").click(function(e){
 		e.preventDefault();
@@ -113,7 +399,7 @@ $(document).ready(function(){
 		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
 		
 		
-		var year = $("#ddlYear option:selected").text();
+		var year = $("#ddlYear1 option:selected").text();
 		var isSelectedEmployee = (totalCheckedColumnEmployee > 0) ? 1 : 0;
 		var isSelectedVendor = (totalCheckedColumnVendor > 0) ? 1 : 0;;
 		var isSelectedProduct = (totalCheckedColumnProduct > 0) ? 1 : 0;;
@@ -129,7 +415,7 @@ $(document).ready(function(){
 		}
 
 		AB.ajax({
-			url: AB.serviceUri + 'purchase/purchaseReport/getSummaryPurchaseDynamic',
+			url: AB.serviceUri + 'purchase/purchaseReport/getSummaryPurchaseDynamicPerYear',
 			type: 'post',
 			dataType: 'json',
 			data: JSON.stringify(objParam),
@@ -154,6 +440,5 @@ $(document).ready(function(){
 				});
 			}
 		});
-		
 	});
 });
