@@ -23,11 +23,61 @@ class ServiceReport extends AB_Controller {
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}
 	
-	public function getSummaryServiceDynamic(){
+	public function getSummaryServiceDynamicPerYear(){
 		$post = $this->rest->post();
 		$res = $this->sp('Summary_Service_Dynamic_PerYear', array
 			(
 				'year' => $post->year,
+				'isSelectedEmployee' => $post->isSelectedEmployee,
+				'isSelectedCustomer' => $post->isSelectedCustomer,
+				'isSelectedProduct' => $post->isSelectedProduct,
+				'isSelectedServiceType' => $post->isSelectedServiceType,
+				'list_column' => $post->list_column
+			)
+		);
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
+	public function getSummaryServiceDynamicPerQuarter(){
+		$post = $this->rest->post();
+		$res = $this->sp('Summary_Service_Dynamic_PerQuarter', array
+			(
+				'year' => $post->year,
+				'quarter' => $post->quarter,
+				'isSelectedEmployee' => $post->isSelectedEmployee,
+				'isSelectedCustomer' => $post->isSelectedCustomer,
+				'isSelectedProduct' => $post->isSelectedProduct,
+				'isSelectedServiceType' => $post->isSelectedServiceType,
+				'list_column' => $post->list_column
+			)
+		);
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+
+	public function getSummaryServiceDynamicPerMonth(){
+		$post = $this->rest->post();
+		$res = $this->sp('Summary_Service_Dynamic_PerMonth', array
+			(
+				'year' => $post->year,
+				'month' => $post->month,
+				'isSelectedEmployee' => $post->isSelectedEmployee,
+				'isSelectedCustomer' => $post->isSelectedCustomer,
+				'isSelectedProduct' => $post->isSelectedProduct,
+				'isSelectedServiceType' => $post->isSelectedServiceType,
+				'list_column' => $post->list_column
+			)
+		);
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+
+	public function getSummaryServiceDynamicPerDate(){
+		$post = $this->rest->post();
+		$res = $this->sp('Summary_Service_Dynamic_PerDate', array
+			(
+				'date' => $post->date,
 				'isSelectedEmployee' => $post->isSelectedEmployee,
 				'isSelectedCustomer' => $post->isSelectedCustomer,
 				'isSelectedProduct' => $post->isSelectedProduct,

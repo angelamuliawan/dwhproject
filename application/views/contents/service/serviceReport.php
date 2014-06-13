@@ -10,7 +10,7 @@
     <section class="content-header">
         <h1>
             Service Report
-            <small>View report related to purchase.</small>
+            <small>View report related to service.</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -35,7 +35,7 @@
                     <form role="form" id="formYear">
                         <div class="form-group">
 							<label>Choose Year</label>
-							<select class="form-control" id="ddlYear">
+							<select class="form-control" id="ddlYear1">
 								<option>2010</option>
 								<option>2011</option>
 								<option>2012</option>
@@ -43,13 +43,13 @@
 								<option>2014</option>
 							</select>
 						</div>
-						<button class="btn btn-success" id="btnSubmitServiceReportPerYear">Show purchase report</button><br/><br/>
+						<button class="btn btn-success" id="btnSubmitServiceReportPerYear">Show service report</button><br/><br/>
                     </form>
 					
 					<form role="form" id="formQuarter" style="display:none;">
                         <div class="form-group">
 							<label>Choose Year</label>
-							<select class="form-control">
+							<select class="form-control" id="ddlYear2">
 								<option>2010</option>
 								<option>2011</option>
 								<option>2012</option>
@@ -59,20 +59,20 @@
 						</div>
 						<div class="form-group">
 							<label>Choose Quarter</label>
-							<select class="form-control">
-								<option>January to March (Quarter 1)</option>
-								<option>April to June (Quarter 2)</option>
-								<option>July to September (Quarter 3)</option>
-								<option>October to December (Quarter 4)</option>
+							<select class="form-control" id="ddlQuarter">
+								<option value="1">January to March (Quarter 1)</option>
+								<option value="2">April to June (Quarter 2)</option>
+								<option value="3">July to September (Quarter 3)</option>
+								<option value="4">October to December (Quarter 4)</option>
 							</select>
 						</div>
-						<button class="btn btn-success" id="btnSubmitPurchaseReportPerQuarter">Show purchase report</button><br/><br/>
+						<button class="btn btn-success" id="btnSubmitServiceReportPerQuarter">Show service report</button><br/><br/>
                     </form>
 					
 					<form role="form" id="formMonth" style="display:none;">
                         <div class="form-group">
 							<label>Choose Year</label>
-							<select class="form-control">
+							<select class="form-control" id="ddlYear3">
 								<option>2010</option>
 								<option>2011</option>
 								<option>2012</option>
@@ -82,7 +82,7 @@
 						</div>
 						<div class="form-group">
 							<label>Choose Month</label>
-							<select class="form-control">
+							<select class="form-control" id="ddlMonth">
 								<option value="1">January</option>
 								<option value="2">February</option>
 								<option value="3">March</option>
@@ -92,12 +92,12 @@
 								<option value="7">July</option>
 								<option value="8">August</option>
 								<option value="9">September</option>
-								<option value="10"October</option>
+								<option value="10">October</option>
 								<option value="11">November</option>
 								<option value="12">December</option>
 							</select>
 						</div>
-						<button class="btn btn-success" id="btnSubmitPurchaseReportPerMonth">Show purchase report</button><br/><br/>
+						<button class="btn btn-success" id="btnSubmitServiceReportPerMonth">Show service report</button><br/><br/>
                     </form>
 					
 					<form role="form" id="formDate" style="display:none;">
@@ -106,10 +106,10 @@
 								<div class="input-group-addon">
 									<i class="fa fa-calendar"></i>
 								</div>
-								<input type="text" data-mask="" data-inputmask="'alias': 'mm/dd/yyyy'" class="form-control">
+								<input type="text" data-mask="" id="txtDateService" data-inputmask="'alias': 'mm/dd/yyyy'" class="form-control">
 							</div><!-- /.input group -->
 						</div>
-						<button class="btn btn-success" id="btnSubmitPurchaseReportPerDate">Show purchase report</button><br/><br/>
+						<button class="btn btn-success" id="btnSubmitServiceReportPerDate">Show service report</button><br/><br/>
                     </form>
 					
 					<b>Employee Term</b>

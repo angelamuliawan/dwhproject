@@ -31,9 +31,7 @@ class PurchaseReport extends AB_Controller {
 				'isSelectedEmployee' => $post->isSelectedEmployee,
 				'isSelectedVendor' => $post->isSelectedVendor,
 				'isSelectedProduct' => $post->isSelectedProduct,
-				'list_column_employee' => $post->list_column_employee,
-				'list_column_vendor' => $post->list_column_vendor,
-				'list_column_product' => $post->list_column_product
+				'list_column' => $post->list_column
 			)
 		);
 		$data = $res -> result();
@@ -49,9 +47,7 @@ class PurchaseReport extends AB_Controller {
 				'isSelectedEmployee' => $post->isSelectedEmployee,
 				'isSelectedVendor' => $post->isSelectedVendor,
 				'isSelectedProduct' => $post->isSelectedProduct,
-				'list_column_employee' => $post->list_column_employee,
-				'list_column_vendor' => $post->list_column_vendor,
-				'list_column_product' => $post->list_column_product
+				'list_column' => $post->list_column
 			)
 		);
 		$data = $res -> result();
@@ -67,9 +63,7 @@ class PurchaseReport extends AB_Controller {
 				'isSelectedEmployee' => $post->isSelectedEmployee,
 				'isSelectedVendor' => $post->isSelectedVendor,
 				'isSelectedProduct' => $post->isSelectedProduct,
-				'list_column_employee' => $post->list_column_employee,
-				'list_column_vendor' => $post->list_column_vendor,
-				'list_column_product' => $post->list_column_product
+				'list_column' => $post->list_column
 			)
 		);
 		$data = $res -> result();
@@ -84,9 +78,7 @@ class PurchaseReport extends AB_Controller {
 				'isSelectedEmployee' => $post->isSelectedEmployee,
 				'isSelectedVendor' => $post->isSelectedVendor,
 				'isSelectedProduct' => $post->isSelectedProduct,
-				'list_column_employee' => $post->list_column_employee,
-				'list_column_vendor' => $post->list_column_vendor,
-				'list_column_product' => $post->list_column_product
+				'list_column' => $post->list_column
 			)
 		);
 		$data = $res -> result();

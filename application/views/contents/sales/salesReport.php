@@ -60,10 +60,10 @@
 						<div class="form-group">
 							<label>Choose Quarter</label>
 							<select class="form-control" id="ddlQuarter">
-								<option>January to March (Quarter 1)</option>
-								<option>April to June (Quarter 2)</option>
-								<option>July to September (Quarter 3)</option>
-								<option>October to December (Quarter 4)</option>
+								<option value="1">January to March (Quarter 1)</option>
+								<option value="2">April to June (Quarter 2)</option>
+								<option value="3">July to September (Quarter 3)</option>
+								<option value="4">October to December (Quarter 4)</option>
 							</select>
 						</div>
 						<button class="btn btn-success" id="btnSubmitSalesReportPerQuarter">Show sales report</button><br/><br/>

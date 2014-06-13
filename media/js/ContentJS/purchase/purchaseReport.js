@@ -85,23 +85,8 @@ $(document).ready(function(){
 			}
 		});
 
-		// remove last character from string, substring until comma
-		if(list_column_product == ''){
-			if(list_column_vendor == '' && list_column_employee != ''){
-				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee != ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee == ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-		}
-		else if(list_column_product != ''){
-			list_column_product = list_column_product.substr(0,list_column_product.length-1);
-		}
-		
-		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+		var list_column = list_column_employee + list_column_vendor + list_column_product;
+		list_column = list_column.substr(0, list_column.length - 1);
 		
 		
 		var date = $("#txtDatePurchase").val();
@@ -114,9 +99,7 @@ $(document).ready(function(){
 			'isSelectedEmployee' : isSelectedEmployee,
 			'isSelectedVendor' : isSelectedVendor,
 			'isSelectedProduct' : isSelectedProduct,
-			'list_column_employee' : list_column_employee,
-			'list_column_vendor' : list_column_vendor,
-			'list_column_product' : list_column_product
+			'list_column' : list_column
 		}
 
 		AB.ajax({
@@ -182,24 +165,8 @@ $(document).ready(function(){
 			}
 		});
 
-		// remove last character from string, substring until comma
-		if(list_column_product == ''){
-			if(list_column_vendor == '' && list_column_employee != ''){
-				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee != ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee == ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-		}
-		else if(list_column_product != ''){
-			list_column_product = list_column_product.substr(0,list_column_product.length-1);
-		}
-		
-		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
-		
+		var list_column = list_column_employee + list_column_vendor + list_column_product;
+		list_column = list_column.substr(0, list_column.length - 1);
 		
 		var year = $("#ddlYear2 option:selected").text();
 		var quarter = $("#ddlQuarter option:selected").val();
@@ -213,9 +180,7 @@ $(document).ready(function(){
 			'isSelectedEmployee' : isSelectedEmployee,
 			'isSelectedVendor' : isSelectedVendor,
 			'isSelectedProduct' : isSelectedProduct,
-			'list_column_employee' : list_column_employee,
-			'list_column_vendor' : list_column_vendor,
-			'list_column_product' : list_column_product
+			'list_column' : list_column
 		}
 
 		AB.ajax({
@@ -281,24 +246,8 @@ $(document).ready(function(){
 			}
 		});
 
-		// remove last character from string, substring until comma
-		if(list_column_product == ''){
-			if(list_column_vendor == '' && list_column_employee != ''){
-				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee != ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee == ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-		}
-		else if(list_column_product != ''){
-			list_column_product = list_column_product.substr(0,list_column_product.length-1);
-		}
-		
-		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
-		
+		var list_column = list_column_employee + list_column_vendor + list_column_product;
+		list_column = list_column.substr(0, list_column.length - 1);
 		
 		var year = $("#ddlYear3 option:selected").text();
 		var month = $("#ddlMonth option:selected").val();
@@ -312,9 +261,7 @@ $(document).ready(function(){
 			'isSelectedEmployee' : isSelectedEmployee,
 			'isSelectedVendor' : isSelectedVendor,
 			'isSelectedProduct' : isSelectedProduct,
-			'list_column_employee' : list_column_employee,
-			'list_column_vendor' : list_column_vendor,
-			'list_column_product' : list_column_product
+			'list_column' : list_column
 		}
 
 		AB.ajax({
@@ -380,23 +327,8 @@ $(document).ready(function(){
 			}
 		});
 
-		// remove last character from string, substring until comma
-		if(list_column_product == ''){
-			if(list_column_vendor == '' && list_column_employee != ''){
-				list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee != ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-			else if(list_column_vendor != '' && list_column_employee == ''){
-				list_column_vendor = list_column_vendor.substr(0,list_column_vendor.length-1);
-			}
-		}
-		else if(list_column_product != ''){
-			list_column_product = list_column_product.substr(0,list_column_product.length-1);
-		}
-		
-		//list_column_employee = list_column_employee.substr(0,list_column_employee.length-1);
+		var list_column = list_column_employee + list_column_vendor + list_column_product;
+		list_column = list_column.substr(0, list_column.length - 1);
 		
 		
 		var year = $("#ddlYear1 option:selected").text();
@@ -409,9 +341,7 @@ $(document).ready(function(){
 			'isSelectedEmployee' : isSelectedEmployee,
 			'isSelectedVendor' : isSelectedVendor,
 			'isSelectedProduct' : isSelectedProduct,
-			'list_column_employee' : list_column_employee,
-			'list_column_vendor' : list_column_vendor,
-			'list_column_product' : list_column_product
+			'list_column' : list_column
 		}
 
 		AB.ajax({
