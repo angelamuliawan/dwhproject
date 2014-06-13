@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends AB_Controller {
+class ManageAccess extends AB_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,16 +20,48 @@ class Home extends AB_Controller {
 	public function index()
 	{
 		if($this->session->userdata('loggedin') == NULL) redirect('login');
+		if(!strstr($this->session->userdata('accessright'),'all')) redirect('home');
+
 		
-		$pageContent = $this->load->view('contents/Dashboard','',TRUE);
+		$pageContent = $this->load->view('contents/ManageAccess','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}
+	public function getUserName(){
+		$res = $this->sp('GetUserName');
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+    }
+   	public function getPageName(){
+		$res = $this->sp('GetPageName');
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+    }
+    public function getAccess(){
+		$res = $this->sp('GetAccess');
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+    }
+    public function deleteUserAccess(){
+    	$post = $this->rest->post();
+		$res = $this->sp('DeleteAccess', 
+			array(
+				'PageID' => $post->pageid,
+				'UserID' => $post->userid
+			));
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+    }
 
-	public function doLogout(){
-		$this->load->helper('url');
-		$this->session->sess_destroy();
-		redirect('login');
-	}
+    public function insertUserAccess(){
+    	$post = $this->rest->post();
+		$res = $this->sp('InsertUserAccess', 
+			array(
+				'PageID' => $post->pageid,
+				'UserID' => $post->userid
+			));
+		$data = $res -> result();
+		$this->load->view('json_view', array('json' => $data));
+    }
 }
 
 /* End of file welcome.php */
