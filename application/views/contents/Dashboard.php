@@ -5,6 +5,7 @@
 			Dashboard
 			<small>Control panel</small>
 		</h1>
+		<a href="#" onclick="introJs().start();">Need Help ?</a>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
 			<li class="active">Dashboard</li>
@@ -12,7 +13,7 @@
 	</section>
 
 	<!-- Main content -->
-	<section class="content">
+	<section class="content" data-step="1" data-intro="This is Summary of report you can view in this year">
 
 		<!-- Small boxes (Stat box) -->
 		<div class="row">
@@ -20,7 +21,7 @@
 			 if(strstr($this->session->userdata('accessright'),'all')|| strstr($this->session->userdata('accessright'),'summaryPurchase'))
              {
              ?>
-			<div class="col-lg-3 col-xs-6">
+			<div class="col-lg-3 col-xs-6" >
 				<!-- small box -->
 				<div class="small-box bg-aqua" id="btnSummaryPurchase">
 					<div class="inner">

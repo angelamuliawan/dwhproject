@@ -12,6 +12,7 @@
             ETL
             <all>Extract - Transform - Load</all>
         </h1>
+		<a href="#" onclick="introJs().start();">Need Help ?</a>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a>
 			</li>
@@ -22,14 +23,17 @@
 	
 	<!-- Main content -->
 	<section class="content">
-		
+		<div  data-step="1" data-intro="This is ETL section to transfer data from OLTP to OLAP">
 		<button class="btn btn-success btnETLNow" >ETL Now</button><br/>
 		Last ETL :  <i> <?php if(isset($data[0]->Last_ETL)) echo $data[0]->Last_ETL;?></i>
+		</div>
+		
 		<h4 class="page-header">
            Dimensi
         </h4>
+		
 
-		<div class="col-md-12">
+		<div class="col-md-12  data-step="2" data-intro="This is section is list of all Dimension">
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Dimensi Waktu</h4>
@@ -108,7 +112,7 @@
            Fakta
         </h4>
 
-		<div class="col-md-12">
+		<div class="col-md-12"  data-step="3" data-intro="This is section is list of all Fact">
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Fakta Pembelian</h4>

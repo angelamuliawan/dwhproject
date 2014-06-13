@@ -26,6 +26,9 @@
 		<!-- Animate -->
         <link href="../../dwhproject/media/css/animate/animate.css" rel="stylesheet" type="text/css" />
 		
+		<!-- Intro -->
+        <link href="../../dwhproject/media/js/plugins/introjs/introjs.css" rel="stylesheet" type="text/css" />
+		
 		<!-- jquery -->
 		<script src="../../dwhproject/media/js/dxchart/jquery-1.10.2.min.js"></script>
 		
@@ -37,6 +40,10 @@
 		<script src="../../dwhproject/media/js/dxchart/globalize.min.js"></script>
 		<script src="../../dwhproject/media/js/dxchart/dx.chartjs.js"></script>
 
+		
+		<!-- Intro -->
+		<script src="../../dwhproject/media/js/plugins/introjs/intro.js"></script>
+		
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -123,7 +130,7 @@
                     </div>
                    
                     <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <ul class="sidebar-menu">
+                    <ul class="sidebar-menu" >
                         <li class="active">
                             <a href="/dwhproject/home">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
