@@ -136,7 +136,7 @@ $(document).ready(function(){
 						id:"pivot",
 						view:"pivot-chart",
 						height:350,
-						width:1300,
+						width:950,
 						structure:{
 							groupBy: "Tanggal",
 							values: [{name:"Jumlah", operation:"max"},{name:"Total", operation:"max"}],
@@ -235,7 +235,7 @@ $(document).ready(function(){
 						id:"pivot",
 						view:"pivot-chart",
 						height:350,
-						width:1300,
+						width:950,
 						structure:{
 							groupBy: "Bulan",
 							values: [{name:"Jumlah", operation:"max"},{name:"Total", operation:"max"}],
@@ -334,7 +334,7 @@ $(document).ready(function(){
 						id:"pivot",
 						view:"pivot-chart",
 						height:350,
-						width:1300,
+						width:950,
 						structure:{
 							groupBy: "Hari",
 							values: [{name:"Jumlah", operation:"max"},{name:"Total", operation:"max"}],
@@ -429,7 +429,7 @@ $(document).ready(function(){
 						id:"pivot",
 						view:"pivot-chart",
 						height:350,
-						width:1300,
+						width:950,
 						structure:{
 							groupBy: "Bulan",
 							values: [{name:"Jumlah", operation:"max", color: "#eed236"},{name:"Total", operation:"max", color: "#36abee"}],
