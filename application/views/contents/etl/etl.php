@@ -22,7 +22,9 @@
 	
 	<!-- Main content -->
 	<section class="content">
-		<button class="btn btn-success btnETLNow" >ETL Now</button>
+		
+		<button class="btn btn-success btnETLNow" >ETL Now</button><br/>
+		Last ETL :  <i> <?php echo $data[0]->Last_ETL;?></i>
 		<h4 class="page-header">
            Dimensi
         </h4>

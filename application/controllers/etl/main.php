@@ -19,7 +19,10 @@ class Main extends AB_Controller {
 	*/
 	public function index()
 	{
-		$pageContent = $this->load->view('contents/etl/etl','',TRUE);
+		$res = $this->sp('ProsesETL_LastETL');
+		$data["data"] = $res->result();
+		//var_dump($data[0]->Last_ETL);
+		$pageContent = $this->load->view('contents/etl/etl',$data,TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}
 	

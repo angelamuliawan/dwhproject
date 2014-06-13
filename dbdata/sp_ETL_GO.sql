@@ -11,7 +11,14 @@ delete from DimensiVendor
 
 delete from FilterTimeStamp
 
---delete from DimensiWaktu
+delete from DimensiWaktu
+
+CREATE PROCEDURE [dbo].[ProsesETL_LastETL]  
+AS
+BEGIN
+	SELECT TOP 1 Last_ETL FROM [DWH_PROJECT_OLAP].dbo.FilterTimeStamp
+	ORDER BY Last_ETL DESC
+END
 
 
 -- =============================================  
@@ -19,7 +26,7 @@ delete from FilterTimeStamp
 -- Create date : June 10, 2014  
 -- Description : ETL Fakta Pembelian
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_FaktaPembelian]  
+CREATE PROCEDURE [dbo].[ProsesETL_FaktaPembelian]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -110,7 +117,7 @@ END
 -- Create date : June 10, 2014  
 -- Description : ETL Fakta Penjualan
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_FaktaPenjualan]  
+CREATE PROCEDURE [dbo].[ProsesETL_FaktaPenjualan]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -203,7 +210,7 @@ END
 -- Create date : June 10, 2014  
 -- Description : ETL Fakta Layanan Service
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_FaktaLayananService]  
+CREATE PROCEDURE [dbo].[ProsesETL_FaktaLayananService]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -303,7 +310,7 @@ END
 -- Create date : June 10, 2014  
 -- Description : ETL Fakta Penyewaan
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_FaktaPenyewaan]  
+CREATE PROCEDURE [dbo].[ProsesETL_FaktaPenyewaan]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -451,7 +458,7 @@ END
 -- Create date : June 13, 2014  
 -- Description : ETL Dimensi Customer
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_DimensiCustomer]  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiCustomer]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -497,7 +504,7 @@ END
 -- Create date : June 13, 2014  
 -- Description : ETL Dimensi Employee
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_DimensiEmployee]  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiEmployee]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -663,3 +670,155 @@ BEGIN
 END  
 
 
+-- =============================================  
+-- Author  : Brian Alexandro  
+-- Create date : May 18, 2014  
+-- Description : ETL Dimensi Waktu  
+-- Testing  : EXEC ETL_DimensiWaktu  
+-- =============================================  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiWaktu]  
+ -- Add the parameters for the stored procedure here  
+AS  
+BEGIN  
+ -- SET NOCOUNT ON added to prevent extra result sets from  
+ -- interfering with SELECT statements.  
+ SET NOCOUNT ON;  
+   
+ -- QUERY ETL FOR INSERT TO OLAP  
+    -- Insert statements for procedure here  
+ IF EXISTS   
+ (  
+  SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp  
+  WHERE NamaTable = 'DimensiWaktu'  
+ )  
+ BEGIN  
+  INSERT INTO  
+   [DWH_PROJECT_OLAP].[dbo].DimensiWaktu  
+  SELECT  
+   joinedFactTimeDimension.[Date],  
+   joinedFactTimeDimension.Hari,  
+   joinedFactTimeDimension.Bulan,  
+   joinedFactTimeDimension.Kuartal,  
+   joinedFactTimeDimension.Tahun  
+  FROM  
+  (  
+   SELECT DISTINCT PurchaseDate AS [Date],  
+    DAY(PurchaseDate) as [Hari],  
+    MONTH(PurchaseDate) as [Bulan],  
+    DATEPART(Quarter, PurchaseDate) AS [Kuartal],  
+    YEAR(PurchaseDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderPurchase  
+   WHERE PurchaseDate >   
+   (  
+    SELECT Last_ETL   
+    FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp   
+    WHERE NamaTable = 'DimensiWaktu'  
+   )  
+   UNION  
+   SELECT DISTINCT OrderDate AS [Date],   
+    DAY(OrderDate) as [Hari],  
+    MONTH(OrderDate) as [Bulan],  
+    DATEPART(Quarter, OrderDate) AS [Kuartal],  
+    YEAR(OrderDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderOrder  
+   WHERE OrderDate >   
+   (  
+    SELECT Last_ETL   
+    FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp   
+    WHERE NamaTable = 'DimensiWaktu'  
+   )  
+   UNION  
+   SELECT DISTINCT RentDate AS [Date],   
+    DAY(RentDate) as [Hari],  
+    MONTH(RentDate) as [Bulan],  
+    DATEPART(Quarter, RentDate) AS [Kuartal],  
+    YEAR(RentDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderRent  
+   WHERE RentDate >   
+   (  
+    SELECT Last_ETL   
+    FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp   
+    WHERE NamaTable = 'DimensiWaktu'  
+   )  
+   UNION  
+   SELECT DISTINCT ServiceDate AS [Date],   
+    DAY(ServiceDate) as [Hari],  
+    MONTH(ServiceDate) as [Bulan],  
+    DATEPART(Quarter, ServiceDate) AS [Kuartal],  
+    YEAR(ServiceDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderService  
+   WHERE ServiceDate >   
+   (  
+    SELECT Last_ETL   
+    FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp   
+    WHERE NamaTable = 'DimensiWaktu'  
+   )  
+  ) AS joinedFactTimeDimension  
+ END  
+  
+ ELSE  
+ BEGIN  
+  INSERT INTO  
+   [DWH_PROJECT_OLAP].[dbo].DimensiWaktu  
+  SELECT  
+   joinedFactTimeDimension.[Date],  
+   joinedFactTimeDimension.Hari,  
+   joinedFactTimeDimension.Bulan,  
+   joinedFactTimeDimension.Kuartal,  
+   joinedFactTimeDimension.Tahun  
+  FROM  
+  (  
+   SELECT DISTINCT PurchaseDate AS [Date],  
+    DAY(PurchaseDate) as [Hari],  
+    MONTH(PurchaseDate) as [Bulan],  
+    DATEPART(Quarter, PurchaseDate) AS [Kuartal],  
+    YEAR(PurchaseDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderPurchase  
+   WHERE PurchaseDate >   
+   (  
+    SELECT Last_ETL   
+    FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp   
+    WHERE NamaTable = 'DimensiWaktu'  
+   )  
+   UNION  
+   SELECT DISTINCT OrderDate AS [Date],   
+    DAY(OrderDate) as [Hari],  
+    MONTH(OrderDate) as [Bulan],  
+    DATEPART(Quarter, OrderDate) AS [Kuartal],  
+    YEAR(OrderDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderOrder  
+   UNION  
+   SELECT DISTINCT RentDate AS [Date],   
+    DAY(RentDate) as [Hari],  
+    MONTH(RentDate) as [Bulan],  
+    DATEPART(Quarter, RentDate) AS [Kuartal],  
+    YEAR(RentDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderRent  
+   UNION  
+   SELECT DISTINCT ServiceDate AS [Date],   
+    DAY(ServiceDate) as [Hari],  
+    MONTH(ServiceDate) as [Bulan],  
+    DATEPART(Quarter, ServiceDate) AS [Kuartal],  
+    YEAR(ServiceDate) AS [Tahun]  
+   FROM [DWH_PROJECT_OLTP].[dbo].TrHeaderService  
+  ) AS joinedFactTimeDimension  
+ END  
+   
+   SELECT @@ROWCOUNT AS RowAffected
+ -- JIKA DIMENSI WAKTU BELUM PERNAH DI ETL SEBELUMNYA  
+ IF EXISTS   
+ (  
+  SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp  
+  WHERE NamaTable = 'DimensiWaktu'  
+ )  
+ BEGIN  
+  UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp   
+  SET Last_ETL = GETDATE()  
+  WHERE NamaTable = 'DimensiWaktu'   
+ END  
+ ELSE  
+ BEGIN  
+  INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp  
+  VALUES ('DimensiWaktu', GETDATE())  
+ END  
+END  

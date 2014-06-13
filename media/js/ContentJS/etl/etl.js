@@ -18,6 +18,19 @@ $(document).ready(function () {
 		var faktaPenyewaan = $("#faktaPenyewaan");
 
 		
+			AB.ajax({
+			url: AB.serviceUri + 'etl/main/proses_dimensiwaktu',
+			type: 'post',
+			async : false,
+			beforeSend: function (xhr) {
+				dimensiWaktu.css("width", Math.floor((Math.random() * 100) + 1) + "%");
+			},
+			success: function (data) {
+				dimensiWaktu.css("width", "100%");
+				dimensiWaktu.html("");
+				dimensiWaktu.append(data[0].RowAffected + " record(s) inserted");
+			}
+		});
 		
 		AB.ajax({
 			url: AB.serviceUri + 'etl/main/proses_dimensicustomer',
