@@ -328,17 +328,11 @@
                             </a>
                         </li>
 						
-						<li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-briefcase"></i>
+						<li class="">
+                            <a href="/dwhproject/sales/salesReport">
+                                <i class="fa fa-bar-chart-o"></i>
                                 <span>Sales Report</span>
-                                <i class="fa fa-angle-left pull-right"></i>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i> In Term of Employee</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i> In Term of Customer</a></li>
-                                <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> In Term of Product</a></li>
-                            </ul>
                         </li>
 						
 						<li class="">
