@@ -19,7 +19,7 @@ class SummaryService extends AB_Controller {
 	 */
 	public function index(){
 		if($this->session->userdata('loggedin') == NULL) redirect('login');
-		if(!strstr($this->session->userdata('accessright'),'all') || !strstr($this->session->userdata('accessright'),'summaryService')) redirect('home');
+		if(!strstr($this->session->userdata('accessright'),'all') && !strstr($this->session->userdata('accessright'),'summaryService')) redirect('home');
 
 		$pageContent = $this->load->view('contents/summary/summaryService','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));

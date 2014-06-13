@@ -20,7 +20,7 @@ class PurchaseReport extends AB_Controller {
 	public function index()
 	{
 		if($this->session->userdata('loggedin') == NULL) redirect('login');
-		if(!strstr($this->session->userdata('accessright'),'all') || !strstr($this->session->userdata('accessright'),'purchaseReport')) redirect('home');
+		if(!strstr($this->session->userdata('accessright'),'all') && !strstr($this->session->userdata('accessright'),'purchaseReport')) redirect('home');
 
 		$pageContent = $this->load->view('contents/purchase/purchaseReport','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));

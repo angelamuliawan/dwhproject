@@ -20,7 +20,7 @@ class ServiceReport extends AB_Controller {
 	public function index()
 	{
 		if($this->session->userdata('loggedin') == NULL) redirect('login');
-		if(!strstr($this->session->userdata('accessright'),'all') || !strstr($this->session->userdata('accessright'),'serviceReport')) redirect('home');
+		if(!strstr($this->session->userdata('accessright'),'all') && !strstr($this->session->userdata('accessright'),'serviceReport')) redirect('home');
 
 		$pageContent = $this->load->view('contents/service/serviceReport','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
