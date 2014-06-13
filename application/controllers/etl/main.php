@@ -49,6 +49,13 @@ class Main extends AB_Controller {
 		$data = $res->result();
 		$this->load->view('json_view', array('json' => $data));
 	}
+	
+	public function proses_dimensivendor()
+	{
+		$res = $this->sp('ProsesETL_DimensiVendor');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
 }
 
 /* End of file welcome.php */

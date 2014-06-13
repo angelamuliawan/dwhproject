@@ -366,3 +366,64 @@ BEGIN
 		VALUES ('FaktaPenyewaan', GETDATE())
 	END  
 END  
+
+
+
+
+
+
+
+
+
+
+begin transaction
+delete from DWH_PROJECT_OLTP.dbo.MsVendor where VendorID <10
+
+
+insert into DWH_PROJECT_OLTP.dbo.MsVendor values('asd','sdsds','23343434','sds@sds.com')
+
+
+select * from DWH_PROJECT_OLTP.dbo.MsVendor
+select * from DWH_PROJECT_OLAP.dbo.DimensiVendor
+
+
+delete from DimensiVendor
+
+-- =============================================  
+-- Author  : Mychael Go
+-- Create date : June 13, 2014  
+-- Description : ETL Dimensi Vendor
+-- =============================================  
+ALTER PROCEDURE [dbo].[ProsesETL_DimensiVendor]  
+AS  
+BEGIN  
+	SET NOCOUNT ON;
+	BEGIN
+		INSERT INTO DimensiVendor (VendorID, VendorName)
+		SELECT DISTINCT
+			mv.VendorID,
+			mv.VendorName
+		FROM 
+			[DWH_PROJECT_OLTP].[dbo].MsVendor AS mv
+		WHERE mv.VendorID NOT IN (
+			SELECT VendorID FROM [DWH_PROJECT_OLAP].[dbo].DimensiVendor
+		)
+	END
+	SELECT @@ROWCOUNT AS RowAffected
+    IF EXISTS 
+	(
+		SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		WHERE NamaTable = 'DimensiVendor'
+	)
+	BEGIN
+		UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp 
+		SET Last_ETL = GETDATE()
+		WHERE NamaTable = 'DimensiVendor' 
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		VALUES ('DimensiVendor', GETDATE())
+	END  
+END  
+
