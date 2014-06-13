@@ -91,8 +91,8 @@ $(document).ready(function(){
 		
 		var date = $("#txtDatePurchase").val();
 		var isSelectedEmployee = (totalCheckedColumnEmployee > 0) ? 1 : 0;
-		var isSelectedVendor = (totalCheckedColumnVendor > 0) ? 1 : 0;;
-		var isSelectedProduct = (totalCheckedColumnProduct > 0) ? 1 : 0;;
+		var isSelectedVendor = (totalCheckedColumnVendor > 0) ? 1 : 0;
+		var isSelectedProduct = (totalCheckedColumnProduct > 0) ? 1 : 0;
 		
 		var objParam = {
 			'date' : date,
@@ -112,6 +112,7 @@ $(document).ready(function(){
 				//console.table(data);
 				// color: "#eed236"
 				// color: "#36abee"
+				$("#purchaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({
@@ -193,6 +194,7 @@ $(document).ready(function(){
 				//console.table(data);
 				// color: "#eed236"
 				// color: "#36abee"
+				$("#purchaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({
@@ -274,6 +276,7 @@ $(document).ready(function(){
 				//console.table(data);
 				// color: "#eed236"
 				// color: "#36abee"
+				$("#purchaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({
@@ -352,6 +355,7 @@ $(document).ready(function(){
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				//console.table(data);
+				$("#purchaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({

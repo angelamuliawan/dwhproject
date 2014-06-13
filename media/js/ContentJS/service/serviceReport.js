@@ -92,6 +92,7 @@ $(document).ready(function () {
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				dbDataSource = data;
+				$("#serviceReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"serviceReportContainer",
@@ -181,6 +182,7 @@ $(document).ready(function () {
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				dbDataSource = data;
+				$("#serviceReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"serviceReportContainer",
@@ -270,6 +272,7 @@ $(document).ready(function () {
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				dbDataSource = data;
+				$("#serviceReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"serviceReportContainer",
@@ -361,6 +364,7 @@ $(document).ready(function () {
 			contentType: 'application/json;charset=utf-8',
 			success: function (data) {
 				dbDataSource = data;
+				$("#serviceReportContainer").empty();
 				webix.ready(function () {
 					webix.ui({
 						container: "serviceReportContainer",
