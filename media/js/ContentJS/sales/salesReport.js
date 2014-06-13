@@ -80,6 +80,7 @@ $(document).ready(function(){
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				dbDataSource = data;
+				$("#salesReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"salesReportContainer",
@@ -157,8 +158,8 @@ $(document).ready(function(){
 			data: JSON.stringify(objParam),
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
-
 				dbDataSource = data;
+				$("#salesReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"salesReportContainer",
@@ -237,6 +238,7 @@ $(document).ready(function(){
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				dbDataSource = data;
+				$("#salesReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"salesReportContainer",
@@ -313,6 +315,7 @@ $(document).ready(function(){
 			contentType: 'application/json;charset=utf-8',
 			success:function(data){
 				dbDataSource = data;
+				$("#salesReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"salesReportContainer",

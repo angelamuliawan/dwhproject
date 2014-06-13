@@ -87,7 +87,6 @@ $(document).ready(function(){
 			'isSelectedCustomer' : isSelectedCustomer,
 			'list_column' : list_column
 		}
-alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCustomer']+objParam['list_column']);
 		
 		AB.ajax({
 			url: AB.serviceUri + 'lease/leaseReport/getSummaryLeaseDynamicPerDate',
@@ -99,6 +98,7 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 				//console.table(data);
 				// color: "#eed236"
 				// color: "#36abee"
+				$("#leaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({
@@ -159,9 +159,6 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 			'isSelectedCustomer' : isSelectedCustomer,
 			'list_column' : list_column
 		}
-		
-		//alert(objParam['year'] +alert['quarter']+ objParam['isSelectedComputer']+objParam['isSelectedCustomer']+objParam['list_column']);
-		
 	
 		AB.ajax({
 			url: AB.serviceUri + 'lease/leaseReport/getSummaryLeaseDynamicPerQuarter',
@@ -173,6 +170,7 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 				//console.table(data);
 				// color: "#eed236"
 				// color: "#36abee"
+				$("#leaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({
@@ -232,11 +230,6 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 			'isSelectedCustomer' : isSelectedCustomer,
 			'list_column' : list_column
 		}
-		
-		//alert(objParam['year'] +alert['month']+ objParam['isSelectedComputer']+objParam['isSelectedCustomer']+objParam['list_column']);
-		
-	
-		
 
 		AB.ajax({
 			url: AB.serviceUri + 'lease/leaseReport/getSummaryLeaseDynamicPerMonth',
@@ -248,6 +241,7 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 				//console.table(data);
 				// color: "#eed236"
 				// color: "#36abee"
+				$("#leaseReportContainer").empty();
 				dbDataSource = data;
 				webix.ready(function(){
 					webix.ui({
@@ -307,10 +301,6 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 			'list_column' : list_column
 		}
 		
-		
-		
-		
-	//	alert(objParam['year'] + objParam['isSelectedComputer']+objParam['isSelectedCustomer']+objParam['list_column']);
 		AB.ajax({
 			url: AB.serviceUri + 'lease/leaseReport/getSummaryLeaseDynamicPerYear',
 			type: 'post',
@@ -320,6 +310,7 @@ alert(objParam['date'] + objParam['isSelectedComputer']+objParam['isSelectedCust
 			success:function(data){
 				//console.table(data);
 				dbDataSource = data;
+				$("#leaseReportContainer").empty();
 				webix.ready(function(){
 					webix.ui({
 						container:"leaseReportContainer",
