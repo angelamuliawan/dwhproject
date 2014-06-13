@@ -15,7 +15,7 @@
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Purchase Report</a></li>
-            <li class="active">Employee Term</li>
+            <li class="active">All Term</li>
         </ol>
     </section>
 

@@ -9,12 +9,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Service Report
-            <small>View report related to purchase.</small>
+            Lease Report
+            <small>View report related to lease.</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Service Report</a></li>
+            <li><a href="#">Lease Report</a></li>
             <li class="active">All Term</li>
         </ol>
     </section>
