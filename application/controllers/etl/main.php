@@ -50,9 +50,53 @@ class Main extends AB_Controller {
 		$this->load->view('json_view', array('json' => $data));
 	}
 	
+	public function proses_dimensiwaktu()
+	{
+		$res = $this->sp('ProsesETL_DimensiWaktu');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
+	public function proses_dimensicustomer()
+	{
+		$res = $this->sp('ProsesETL_DimensiCustomer');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
+	
+	
+	public function proses_dimensiemployee()
+	{
+		$res = $this->sp('ProsesETL_DimensiEmployee');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
 	public function proses_dimensivendor()
 	{
 		$res = $this->sp('ProsesETL_DimensiVendor');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
+	public function proses_dimensiproduct()
+	{
+		$res = $this->sp('ProsesETL_DimensiProduct');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
+	public function proses_dimensiservicetype()
+	{
+		$res = $this->sp('ProsesETL_DimensiServiceType');
+		$data = $res->result();
+		$this->load->view('json_view', array('json' => $data));
+	}
+	
+	public function proses_dimensicomputerrent()
+	{
+		$res = $this->sp('ProsesETL_DimensiComputerRent');
 		$data = $res->result();
 		$this->load->view('json_view', array('json' => $data));
 	}

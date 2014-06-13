@@ -32,7 +32,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Waktu</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiWaktu" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Customer</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiCustomer" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Employee</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiEmployee" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Vendor</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiVendor" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>
@@ -73,7 +73,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Product</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiProduct" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Service Type</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiServiceType" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 				<div class="col-md-4">
 					<h4>Dimensi Computer Rent</h4>
 					<div class="progress  progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<div id="dimensiComputerRent" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
 							
 						</div>
 					</div>

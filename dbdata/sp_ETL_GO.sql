@@ -1,3 +1,19 @@
+delete from FaktaLayananService
+delete from FaktaPembelian
+delete from FaktaPenjualan
+delete from FaktaPenyewaan
+delete from DimensiComputerRent
+delete from DimensiCustomer
+delete from DimensiEmployee
+delete from DimensiProduct
+delete from DimensiServiceType
+delete from DimensiVendor
+
+delete from FilterTimeStamp
+
+--delete from DimensiWaktu
+
+
 -- =============================================  
 -- Author  : Mychael Go
 -- Create date : June 10, 2014  
@@ -394,7 +410,7 @@ delete from DimensiVendor
 -- Create date : June 13, 2014  
 -- Description : ETL Dimensi Vendor
 -- =============================================  
-ALTER PROCEDURE [dbo].[ProsesETL_DimensiVendor]  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiVendor]  
 AS  
 BEGIN  
 	SET NOCOUNT ON;
@@ -426,4 +442,224 @@ BEGIN
 		VALUES ('DimensiVendor', GETDATE())
 	END  
 END  
+
+
+
+
+-- =============================================  
+-- Author  : Mychael Go
+-- Create date : June 13, 2014  
+-- Description : ETL Dimensi Customer
+-- =============================================  
+ALTER PROCEDURE [dbo].[ProsesETL_DimensiCustomer]  
+AS  
+BEGIN  
+	SET NOCOUNT ON;
+	BEGIN
+		INSERT INTO DimensiCustomer (CustomerID, CustomerName, CustomerGender,CustomerPhone)
+		SELECT DISTINCT
+			mc.CustomerID,
+			mc.CustomerName,
+			CustomerGender =
+				CASE mc.CustomerGender 
+				WHEN  '1' THEN 'Male' 
+				ELSE 'Female'
+				END,
+			mc.CustomerPhone
+		FROM 
+			[DWH_PROJECT_OLTP].[dbo].MsCustomer AS mc
+		WHERE mc.CustomerID NOT IN (
+			SELECT CustomerID FROM [DWH_PROJECT_OLAP].[dbo].DimensiCustomer
+		)
+	END
+	SELECT @@ROWCOUNT AS RowAffected
+    IF EXISTS 
+	(
+		SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		WHERE NamaTable = 'DimensiCustomer'
+	)
+	BEGIN
+		UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp 
+		SET Last_ETL = GETDATE()
+		WHERE NamaTable = 'DimensiCustomer' 
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		VALUES ('DimensiCustomer', GETDATE())
+	END  
+END  
+
+
+
+-- =============================================  
+-- Author  : Mychael Go
+-- Create date : June 13, 2014  
+-- Description : ETL Dimensi Employee
+-- =============================================  
+ALTER PROCEDURE [dbo].[ProsesETL_DimensiEmployee]  
+AS  
+BEGIN  
+	SET NOCOUNT ON;
+	BEGIN
+		INSERT INTO DimensiEmployee(EmployeeID, EmployeeName, EmployeePhone,EmployeeSalary, EmployeeGender,EmployeeJoinDate)
+		SELECT DISTINCT
+			me.EmployeeID,
+			me.EmployeeName,
+			me.EmployeePhone,
+			me.EmployeeSalary,
+			EmployeeGender =
+				CASE me.EmployeeGender
+				WHEN  '1' THEN 'Male' 
+				ELSE 'Female'
+				END,
+			me.EmployeeJoinDate
+		FROM 
+			[DWH_PROJECT_OLTP].[dbo].MsEmployee AS me
+		WHERE me.EmployeeID NOT IN (
+			SELECT EmployeeID FROM [DWH_PROJECT_OLAP].[dbo].DimensiEmployee
+		)
+	END
+	SELECT @@ROWCOUNT AS RowAffected
+    IF EXISTS 
+	(
+		SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		WHERE NamaTable = 'DimensiEmployee'
+	)
+	BEGIN
+		UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp 
+		SET Last_ETL = GETDATE()
+		WHERE NamaTable = 'DimensiEmployee' 
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		VALUES ('DimensiEmployee', GETDATE())
+	END  
+END  
+
+
+-- =============================================  
+-- Author  : Mychael Go
+-- Create date : June 13, 2014  
+-- Description : ETL Dimensi Employee
+-- =============================================  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiProduct]  
+AS  
+BEGIN  
+	SET NOCOUNT ON;
+	BEGIN
+		INSERT INTO DimensiProduct(ProductID, ProductName, ProductPurchasePrice,ProductSalesPrice, ProductTypeName)
+		SELECT DISTINCT
+			mp.ProductID,
+			mp.ProductName,
+			mp.ProductPurchasePrice,
+			mp.ProductSalesPrice,
+			mpt.ProductTypeName			
+		FROM 
+			[DWH_PROJECT_OLTP].[dbo].MsProduct AS mp
+			JOIN [DWH_PROJECT_OLTP].[dbo].MsProductType AS mpt ON mpt.ProductTypeID = mp.ProductTypeID
+		WHERE mp.ProductID NOT IN (
+			SELECT ProductID FROM [DWH_PROJECT_OLAP].[dbo].DimensiProduct
+		)
+	END
+	SELECT @@ROWCOUNT AS RowAffected
+    IF EXISTS 
+	(
+		SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		WHERE NamaTable = 'DimensiProduct'
+	)
+	BEGIN
+		UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp 
+		SET Last_ETL = GETDATE()
+		WHERE NamaTable = 'DimensiProduct' 
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		VALUES ('DimensiProduct', GETDATE())
+	END  
+END  
+
+
+-- =============================================  
+-- Author  : Mychael Go
+-- Create date : June 13, 2014  
+-- Description : ETL Dimensi Service Type
+-- =============================================  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiServiceType]  
+AS  
+BEGIN  
+	SET NOCOUNT ON;
+	BEGIN
+		INSERT INTO DimensiServiceType(ServiceTypeID, ServiceTypeName, ServiceTypePrice)
+		SELECT DISTINCT
+			mst.ServiceTypeID,
+			mst.ServiceTypeName,
+			mst.ServiceTypePrice		
+		FROM 
+			[DWH_PROJECT_OLTP].[dbo].MsServiceType AS mst
+		WHERE mst.ServiceTypeID NOT IN (
+			SELECT ServiceTypeID FROM [DWH_PROJECT_OLAP].[dbo].DimensiServiceType
+		)
+	END
+	SELECT @@ROWCOUNT AS RowAffected
+    IF EXISTS 
+	(
+		SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		WHERE NamaTable = 'DimensiServiceType'
+	)
+	BEGIN
+		UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp 
+		SET Last_ETL = GETDATE()
+		WHERE NamaTable = 'DimensiServiceType' 
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		VALUES ('DimensiServiceType', GETDATE())
+	END  
+END  
+
+
+
+-- =============================================  
+-- Author  : Mychael Go
+-- Create date : June 13, 2014  
+-- Description : ETL Dimensi Computer Rent
+-- =============================================  
+CREATE PROCEDURE [dbo].[ProsesETL_DimensiComputerRent]  
+AS  
+BEGIN  
+	SET NOCOUNT ON;
+	BEGIN
+		INSERT INTO DimensiComputerRent(ComputerID, ComputerName, RentPrice)
+		SELECT DISTINCT
+			mcr.ComputerID,
+			mcr.ComputerName,
+			mcr.RentPrice
+		FROM 
+			[DWH_PROJECT_OLTP].[dbo].MsComputerRental AS mcr
+		WHERE mcr.ComputerID NOT IN (
+			SELECT ComputerID FROM [DWH_PROJECT_OLAP].[dbo].DimensiComputerRent
+		)
+	END
+	SELECT @@ROWCOUNT AS RowAffected
+    IF EXISTS 
+	(
+		SELECT * FROM [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		WHERE NamaTable = 'DimensiComputerRent'
+	)
+	BEGIN
+		UPDATE [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp 
+		SET Last_ETL = GETDATE()
+		WHERE NamaTable = 'DimensiComputerRent' 
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [DWH_PROJECT_OLAP].[dbo].FilterTimeStamp
+		VALUES ('DimensiComputerRent', GETDATE())
+	END  
+END  
+
 
