@@ -30,22 +30,21 @@ class Login extends AB_Controller {
 	public function loginUser()
 	{
 		$post = $this->rest->post();
-		// $result = $this->sp('Login', array(
-			// 'Username' => '',
-			// 'Password' => ''
-		// ));
-
-		$query = $this->db->query("Login @Username = ?, @Password = ?", array($post->username, MD5($post->password)));
-		$user = $query->row();
+		$res = $this->sp('Login', array(
+			'Username' => $post->username,
+			'Password' => MD5($post->password)
+		));
 		
-		if($user)
+		$data = $res->result();
+		if($data[0]->UserID != -1)
 		{
-			// $payload['json'] = array(
-				// 'status' => 'failed'
-			// );
-			// return $this->load->view('json_view', $payload);
+			$this->session->set_userdata('loggedin',true);
+			$this->session->set_userdata('userid',$data[0]->UserID);
+			$this->session->set_userdata('username',$data[0]->Username);
+			$this->session->set_userdata('accessright',$data[0]->AccessRight);
+			$this->session->set_userdata('position',$data[0]->Position);
+			$this->session->set_userdata('division',$data[0]->Division);
 			
-			// dont forget to set userdata here
 			$this->load->view('json_view', array('json' => array('status' => 'success')));
 		}
 		else{

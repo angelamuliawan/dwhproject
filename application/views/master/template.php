@@ -66,14 +66,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>Brian <i class="caret"></i></span>
+                                <span><?php echo $this->session->userdata('username') ?><i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="../../dwhproject/media/img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
-										UserName - Position 
+										<?php echo $this->session->userdata('position'), ' - ',  $this->session->userdata('division'); ?>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
@@ -96,7 +96,7 @@
                                     </div>
 									-->
                                     <div class="pull-right">
-                                        <a href="/dwhproject/" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="#" class="btn btn-default btn-flat" id="btnSignOut">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -116,7 +116,7 @@
                             <img src="../../dwhproject/media/img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Brian</p>
+                            <p>Hello, <?= $this->session->userdata('username')?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -129,39 +129,92 @@
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
+                        <?php
+                        if($this->session->userdata('loggedin')!=NULL) 
+                        {
+                            if(strstr($this->session->userdata('accessright'),'all'))
+                            {
+                        ?>
 						<li>
                             <a href="/dwhproject/etl/main">
                                 <i class="fa fa-adjust"></i> <span>ETL</span>
                             </a>
                         </li>
+                        <?php
+                            }
+                        }
+
+                        if($this->session->userdata('loggedin')!=NULL) 
+                        {
+                            if(strstr($this->session->userdata('accessright'),'all') || strstr($this->session->userdata('accessright'),'purchaseReport')) 
+                            {
+                        ?>
                         <li class="">
                             <a href="/dwhproject/purchase/purchaseReport">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Purchase Report</span>
                             </a>
                         </li>
-						
+						<?php
+                            }
+                        }
+                        if($this->session->userdata('loggedin')!=NULL) 
+                        {
+                            if(strstr($this->session->userdata('accessright'),'all') || strstr($this->session->userdata('accessright'),'salesReport')) 
+                            {
+                        ?>
 						<li class="">
                             <a href="/dwhproject/sales/salesReport">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Sales Report</span>
                             </a>
                         </li>
-						
+						<?php
+                            }
+                        }
+                        if($this->session->userdata('loggedin')!=NULL) 
+                        {
+                            if(strstr($this->session->userdata('accessright'),'all') || strstr($this->session->userdata('accessright'),'leaseReport')) 
+                            {
+                        ?>
 						<li class="">
                             <a href="/dwhproject/lease/leaseReport">
-                                <i class="fa fa-book"></i>
+                                <i class="fa fa-bar-chart-o"></i>
                                 <span>Lease Report</span>
                             </a>
                         </li>
-						
+						<?php
+                            }
+                        }
+                        if($this->session->userdata('loggedin')!=NULL) 
+                        {
+                            if(strstr($this->session->userdata('accessright'),'all') || strstr($this->session->userdata('accessright'),'serviceReport')) 
+                            {
+                        ?>
 						<li class="">
                             <a href="/dwhproject/service/serviceReport">
-                                <i class="fa fa-dashboard"></i>
+                                <i class="fa fa-bar-chart-o"></i>
                                 <span>Service Report</span>
                             </a>
                         </li>
-						
+                        <?php
+                            }
+                        }
+                         if($this->session->userdata('loggedin')!=NULL) 
+                        {
+                            if(strstr($this->session->userdata('accessright'),'all')) 
+                            {
+                        ?>
+                        <li class="">
+                            <a href="/dwhproject/manageAccess">
+                                <i class="fa fa-book"></i>
+                                <span>Manage User Access</span>
+                            </a>
+                        </li>
+                        <?php
+                            }
+                        }
+                        ?>
                     </ul>
                 </section>
                 <!-- /.sidebar -->
@@ -193,3 +246,12 @@
 		
     </body>
 </html>
+<script>
+$(document).ready(function(){
+    $("#btnSignOut").click(function(e){
+        e.preventDefault();
+        window.location.href= AB.serviceUri+'home/doLogout';
+        //alert(AB.serviceUri+'home/doLogout');
+    });
+});
+</script>

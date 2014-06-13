@@ -19,6 +19,9 @@ class Main extends AB_Controller {
 	*/
 	public function index()
 	{
+		if($this->session->userdata('loggedin') == NULL) redirect('login');
+		if(!strstr($this->session->userdata('accessright'),'all')) redirect('home');
+		
 		$res = $this->sp('ProsesETL_LastETL');
 		$data["data"] = $res->result();
 		//var_dump($data[0]->Last_ETL);

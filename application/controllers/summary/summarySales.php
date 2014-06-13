@@ -18,6 +18,9 @@ class SummarySales extends AB_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index(){
+		if($this->session->userdata('loggedin') == NULL) redirect('login');
+		if(!strstr($this->session->userdata('accessright'),'all') || !strstr($this->session->userdata('accessright'),'summarySales')) redirect('home');
+
 		$pageContent = $this->load->view('contents/summary/summarySales','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}

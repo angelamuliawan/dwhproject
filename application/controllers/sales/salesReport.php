@@ -19,6 +19,9 @@ class SalesReport extends AB_Controller {
 	*/
 	public function index()
 	{
+		if($this->session->userdata('loggedin') == NULL) redirect('login');
+		if(!strstr($this->session->userdata('accessright'),'all') || !strstr($this->session->userdata('accessright'),'salesReport')) redirect('home');
+
 		$pageContent = $this->load->view('contents/sales/salesReport','',TRUE);
 		$this->load->view('master/template',array('pageContent'=>$pageContent));
 	}
