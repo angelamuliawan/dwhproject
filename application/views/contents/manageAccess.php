@@ -27,11 +27,12 @@
 				</thead>
 				<tbody>
 					<tr id="iTemplateAcc"style="display:none" class="loop">
+						<input type="hidden" class="hdnUserID" />
 						<td class="iUser" style="text-align:center;">
-							<select id="ddlUser"></select>
+							<select class="ddlUser"></select>
 						</td>
 						<td class="iPage" style="text-align:center;">
-							<select id="ddlPage"></select>
+							<select class="ddlPage"></select>
 						</td>
 						<td class="iAction" style="text-align:center;">
 							<a style="cursor:pointer;" class="btnDeleteAccess">Delete</a>
