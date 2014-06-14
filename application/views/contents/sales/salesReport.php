@@ -23,6 +23,7 @@
     <section class="content">
         <h4 class="page-header">
             Time Term : 
+			<br/>
             <button class="btn btn-success btnTimeTerm" referTo="formYear">Year</button>
             <button class="btn btn-success btnTimeTerm" referTo="formQuarter">Quarter</button>
             <button class="btn btn-success btnTimeTerm" referTo="formMonth">Month</button>
